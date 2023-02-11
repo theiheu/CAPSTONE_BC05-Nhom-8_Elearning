@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from "react";
 import Loading from "./components/Loading/loading";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import "./App.css";
-import { Switch, Router } from "react-router-dom";
+import { Switch,Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import UserTemplate from "./templates/UserTemplate/UserTemplate";
 import HomeTemplate from "./templates/Home/HomeTemplate";
@@ -11,6 +11,7 @@ import AdminTemplate from "./templates/Admin/AdminTemplate";
 import Dashboard from "./templates/Admin/Pages/Dashboard";
 import Courses from "./templates/Admin/Pages/Courses/Courses";
 import Users from "./templates/Admin/Pages/Users/Users";
+import Documents from "./templates/Admin/Pages/Documents";
 import AddNewCourses from "./templates/Admin/Pages/Courses/addNewCourses";
 import EditCourse from "./templates/Admin/Pages/Courses/editCourse";
 import CoursesTemplate from "./templates/Home/Pages/Courses/CoursesTemplate";
@@ -19,6 +20,7 @@ import addNewUser from "./templates/Admin/Pages/Users/addNewUser";
 export const history = createBrowserHistory();
 
 function App() {
+
   return (
     <div>
       <Router history={history}>
@@ -28,9 +30,7 @@ function App() {
             <HomeTemplate
               path="/"
               exact
-              Component={lazy(() =>
-                import("./templates/Home/Pages/HomeContent")
-              )}
+              Component={lazy(() => import("./templates/Home/Pages/HomeContent"))}
             />
             <HomeTemplate
               path="/courses"
@@ -59,16 +59,12 @@ function App() {
             <HomeTemplate
               path="/profile"
               exact
-              Component={lazy(() =>
-                import("./templates/Home/Pages/UserPages/Profile")
-              )}
+              Component={lazy(() => import("./templates/Home/Pages/UserPages/Profile"))}
             />
             <HomeTemplate
               path="/alert"
               exact
-              Component={lazy(() =>
-                import("./templates/PageNotFound/AlertPage")
-              )}
+              Component={lazy(() => import("./templates/PageNotFound/AlertPage"))}
             />
             <UserTemplate
               path="/signup"
@@ -84,9 +80,21 @@ function App() {
                 import("./templates/Home/Pages/UserPages/SignIn")
               )}
             />
-            <AdminTemplate path="/admin" exact Component={Dashboard} />
-            <AdminTemplate path="/admin/dasboard" exact Component={Dashboard} />
-            <AdminTemplate path="/admin/courses" exact Component={Courses} />
+            <AdminTemplate
+              path="/admin"
+              exact
+              Component={Dashboard}
+            />
+            <AdminTemplate
+              path="/admin/dasboard"
+              exact
+              Component={Dashboard}
+            />
+            <AdminTemplate
+              path="/admin/courses"
+              exact
+              Component={Courses}
+            />
             <AdminTemplate
               path="/admin/courses/add-new"
               exact
@@ -97,7 +105,11 @@ function App() {
               exact
               Component={EditCourse}
             />
-            <AdminTemplate path="/admin/users" exact Component={Users} />
+            <AdminTemplate
+              path="/admin/users"
+              exact
+              Component={Users}
+            />
             <AdminTemplate
               path="/admin/users/add-new"
               exact

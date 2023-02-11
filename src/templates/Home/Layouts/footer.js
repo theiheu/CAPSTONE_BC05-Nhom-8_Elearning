@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import LazyLoad from "react-lazyload";
 import "./Style/footer.css";
 import { getCateCoursesAction } from "../../../redux/actions/coursesActions";
 import { Link } from "react-router-dom";
@@ -12,18 +13,13 @@ export default function Footer() {
 
   useEffect(() => {
     dispatch(getCateCoursesAction);
-  });
+  }, []);
 
   const renderCateCourses = () => {
     return arrCateCourse?.map((cateCourses, index) => {
       return (
         <li key={index}>
-          <Link
-            className="text-base sm:text-lg"
-            to={`/courses/${cateCourses.maDanhMuc}`}
-          >
-            {cateCourses.tenDanhMuc}
-          </Link>
+          <Link className="text-base sm:text-lg" to={`/courses/${cateCourses.maDanhMuc}`}>{cateCourses.tenDanhMuc}</Link>
         </li>
       );
     });
@@ -80,11 +76,7 @@ export default function Footer() {
               className="flex  justify-start sm:justify-center space-x-3 lg:justify-start"
             >
               <div className="flex items-center justify-start sm:justify-center rounded-full dark:bg-violet-400">
-                <img
-                  className="w-3/4 sm:w-4/5"
-                  src="/images/logo.png"
-                  alt="E - LEARNING"
-                />
+                <img className="w-3/4 sm:w-4/5"src="/images/logo.png" alt="E - LEARNING"/>
                 {/* <h1 style={{fontSize:30}}>E - LEARNING</h1> */}
               </div>
             </a>
@@ -94,7 +86,9 @@ export default function Footer() {
               <h3 className="font-bold text-lg sm:text-2xl tracking-wide uppercase dark:text-coolGray-50">
                 Khoá học
               </h3>
-              <ul className="space-y-1">{renderCateCourses()}</ul>
+              <ul className="space-y-1">
+                {renderCateCourses()}
+              </ul>
             </div>
             <div className="footer_links_community space-y-3">
               <h3 className="font-bold  text-lg sm:text-2xl tracking-wide uppercase dark:text-coolGray-50">
@@ -209,7 +203,8 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer_copyright py-6 text-sm text-center dark:text-coolGray-400">
-          © 2022 FE71 -<a href="#"> Trúc Ngân Neeee</a>
+          © 2022 FE71 -
+          <a href="#"> Trúc Ngân Neeee</a>
         </div>
       </footer>
     </Fragment>

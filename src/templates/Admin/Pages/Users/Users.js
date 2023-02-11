@@ -1,29 +1,32 @@
 import React, { Fragment } from "react";
 import "./../../style/StyleAdmin.css";
-import { SearchIcon, TrashIcon } from "@heroicons/react/outline";
+import { PencilAltIcon, SearchIcon, TrashIcon } from "@heroicons/react/outline";
 import { Button, Input, Table } from "antd";
-import { EditOutlined } from "@ant-design/icons";
+import { EditOutlined, SearchOutlined, DeleteOutlined} from '@ant-design/icons';
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import AddNewUsers from "./addNewUser";
+import AddNewUsers from './addNewUser';
 import {
   deleteUserAction,
   getUserListAction,
+  
 } from "../../../../redux/actions/userManagermentAction";
+
 
 export default function User() {
   const { userList } = useSelector((state) => state.UserManagermentReducer);
   const [showForm, setShowForm] = useState(false);
   const [capNhat, setCapNhat] = useState({ capNhat: [] });
-  const [typeAction, setTypeAction] = useState("update");
+  const [typeAction, setTypeAction] = useState('update');
   const handleCloseForm = () => setShowForm(false);
+  const [q, setQ] =  useState("");
   const dispatch = useDispatch();
 
   const { Search } = Input;
 
   useEffect(() => {
     dispatch(getUserListAction());
-  });
+  }, []);
 
   const columns = [
     {
@@ -33,13 +36,13 @@ export default function User() {
         let taiKhoanA = a.taiKhoan.toLowerCase().trim();
         let taiKhoanB = b.taiKhoan.toLowerCase().trim();
         if (taiKhoanA > taiKhoanB) {
-          return 1;
+            return 1;
         }
         return -1;
-      },
-      sortDirections: ["descend", "ascend"],
-      width: "15%",
     },
+    sortDirections: ['descend', 'ascend'],
+    width: '15%'
+  },
     {
       title: "Họ Tên",
       dataIndex: "hoTen",
@@ -51,23 +54,23 @@ export default function User() {
         }
         return -1;
       },
-      sortDirections: ["descend", "ascend"],
+      sortDirections: ["descend", 'ascend'],
       width: "20%",
     },
     {
-      title: "Email",
-      dataIndex: "email",
-      sorter: (a, b) => {
-        let emailA = a.email.toLowerCase().trim();
-        let emailB = b.email.toLowerCase().trim();
-        if (emailA > emailB) {
-          return 1;
-        }
-        return -1;
-      },
-
-      sortDirections: ["descend", "ascend"],
-      width: "20%",
+      title: 'Email',
+            dataIndex: 'email',
+            sorter: (a, b) => {
+                let emailA = a.email.toLowerCase().trim();
+                let emailB = b.email.toLowerCase().trim();
+                if(emailA > emailB) {
+                    return 1;
+                }
+                return -1;
+            },
+           
+            sortDirections: ['descend', 'ascend'],
+            width: '20%'
     },
     {
       title: "Điện thoại",
@@ -77,7 +80,7 @@ export default function User() {
     {
       title: "Mã người dùng",
       dataIndex: "maLoaiNguoiDung",
-      key: "maLoaiNguoiDung",
+      key: 'maLoaiNguoiDung',
       // sorter: (a, b) => {
       //   let GV = a.maLoaiNguoiDung.toLowerCase().trim();
       //   let HV = b.maLoaiNguoiDung.toLowerCase().trim();
@@ -94,17 +97,11 @@ export default function User() {
       render: (text, user) => {
         return (
           <Fragment>
-            <span
-              className="mr-2 text-base"
-              style={{ cursor: "pointer" }}
-              onClick={() => {
-                setTypeAction("update");
-                setCapNhat(user);
-                setShowForm(true);
-              }}
-            >
-              <EditOutlined style={{ color: "blue" }} />{" "}
-            </span>
+            <span className = "mr-2 text-base" style={{cursor:'pointer'}} onClick={()=>{
+                        setTypeAction('update');
+                        setCapNhat(user);
+                        setShowForm(true);
+                    }}><EditOutlined style={{ color: 'blue' }} /> </span>
             <span
               key={2}
               className="tooltip bg-white cursor-pointer"
@@ -119,6 +116,7 @@ export default function User() {
               <TrashIcon className=" h-7 w-7 text-red-600 hover:scale-125 transition duration-150 origin-center bg-white" />
               <span className="tooltiptext">Xoá</span>
             </span>
+            
           </Fragment>
         );
       },
@@ -142,17 +140,10 @@ export default function User() {
         <div className="max-w-7xl flex flex-row items-center justify-between mx-auto px-4 xl:px-0 sm:px-6 md:px-8">
           <div>
             <h3 className="text-4xl">Quản lý người dùng</h3>
-            <Button
-              type="primary"
-              style={{ width: 150 }}
-              className="mb-4"
-              onClick={() => {
-                setTypeAction("insert");
+            <Button type='primary' style={{ width: 150 }} className='mb-4' onClick={() => {
+                setTypeAction('insert');
                 setShowForm(true);
-              }}
-            >
-              Thêm người dùng
-            </Button>
+            }}>Thêm người dùng</Button>
           </div>
           <div className="inline-flex  items-center">
             <Search
@@ -172,12 +163,7 @@ export default function User() {
               onChange={onChange}
               rowKey={"taiKhoan"}
             />
-            <AddNewUsers
-              show={showForm}
-              close={handleCloseForm}
-              capNhat={capNhat}
-              type={typeAction}
-            />
+             <AddNewUsers show = {showForm} close ={handleCloseForm} capNhat = {capNhat} type = {typeAction}/>
           </div>
         </div>
       </div>

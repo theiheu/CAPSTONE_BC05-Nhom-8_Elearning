@@ -61,7 +61,7 @@ export default function Navbar({ toggle }) {
     } else {
       return (
         <div
-          tabIndex="0"
+          tabindex="0"
           className="inline-flex group ml-auto sm:mx-2 relative"
         >
           <button
@@ -69,7 +69,7 @@ export default function Navbar({ toggle }) {
             className=" ring-main-500 w-max ring-1 place-self-stretch hover:bg-main-500 text-main-500 hover:text-white 
             transition-colors duration-150 px-4 py-2 lg:text-md xl:text-lg relative rounded-md"
           >
-            {userSignIn?.taiKhoan}
+           {userSignIn?.taiKhoan}
           </button>
 
           <ul
@@ -144,7 +144,7 @@ export default function Navbar({ toggle }) {
       <nav className="ml-3 sm:ml-5 flex justify-between items-center w-full bg-white text-black font-medium">
         <div className="lg:flex-none">
           <NavLink to="/">
-            <h1 style={{ fontSize: 30 }}>CYBERSOFT LEARNING</h1>
+            <h1 style={{fontSize:30}} >CYBERSOFT LEARNING</h1>
           </NavLink>
         </div>
 
@@ -206,6 +206,7 @@ export default function Navbar({ toggle }) {
           />
         </div>
       </nav>
+
     </div>
   );
 }

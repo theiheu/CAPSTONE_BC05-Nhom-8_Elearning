@@ -5,6 +5,9 @@ import { Fragment } from "react";
 import {
   DotsHorizontalIcon,
   AcademicCapIcon,
+  CalendarIcon,
+  FolderIcon,
+  HomeIcon,
   PlusCircleIcon,
   UsersIcon,
 } from "@heroicons/react/outline";
@@ -32,33 +35,37 @@ export default function AdminTemplate(props) {
   const renderSignIn = () => {
     if (!_.isEmpty(userSignIn)) {
       return (
-        <div className="max-w-xs bg-white flex items-center text-sm hover:bg-transparent">
-          <img
-            className="h-8 w-8 rounded-full"
-            src="https://thumbs.dreamstime.com/b/user-icon-trendy-flat-style-isolated-grey-background-user-symbol-user-icon-trendy-flat-style-isolated-grey-background-123663211.jpg"
-            alt=""
-          />
-          <span className="mr-3 font-medium">{userSignIn.taiKhoan}</span>
+    
+            <div className="max-w-xs bg-white flex items-center text-sm hover:bg-transparent">
+              <img
+                className="h-8 w-8 rounded-full"
+                src="https://thumbs.dreamstime.com/b/user-icon-trendy-flat-style-isolated-grey-background-user-symbol-user-icon-trendy-flat-style-isolated-grey-background-123663211.jpg"
+                alt=""
+              />
+              <span className="mr-3 font-medium">
+                {userSignIn.taiKhoan}
+              </span>
+              
+              <button
+                onClick={() => {
+                  history.push("/profile");
+                }}
+                className=" px-3 py-2 text-sm text-gray-700 hover:text-red-400"
+              >
+                Profile
+              </button>
+              <button
+                onClick={() => {
+                  localStorage.removeItem(USER_SIGNIN);
+                  localStorage.removeItem(TOKEN);
+                  window.location.replace("/");
+                }}
+                className=" px-3 py-2 text-sm text-gray-700 hover:text-red-400"
+              >
+                Đăng xuất
+              </button>
+            </div>
 
-          <button
-            onClick={() => {
-              history.push("/profile");
-            }}
-            className=" px-3 py-2 text-sm text-gray-700 hover:text-red-400"
-          >
-            Profile
-          </button>
-          <button
-            onClick={() => {
-              localStorage.removeItem(USER_SIGNIN);
-              localStorage.removeItem(TOKEN);
-              window.location.replace("/");
-            }}
-            className=" px-3 py-2 text-sm text-gray-700 hover:text-red-400"
-          >
-            Đăng xuất
-          </button>
-        </div>
       );
     }
   };
@@ -133,7 +140,10 @@ export default function AdminTemplate(props) {
                             key="4"
                             style={{ display: "flex", alignItems: "center" }}
                           >
-                            <Link to="/admin/users" style={{ display: "flex" }}>
+                            <Link
+                              to="/admin/users"
+                              style={{ display: "flex" }}
+                            >
                               <DotsHorizontalIcon className="mr-2" width="15" />
                               Danh sách người dùng
                             </Link>
@@ -147,7 +157,7 @@ export default function AdminTemplate(props) {
                               Thêm người dùng
                             </Link>
                           </Menu.Item> */}
-                        </SubMenu>
+                        </SubMenu>      
                       </Menu>
                     </div>
                   </div>
