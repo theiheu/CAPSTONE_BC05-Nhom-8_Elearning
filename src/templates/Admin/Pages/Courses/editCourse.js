@@ -1,12 +1,10 @@
-
 import React, { Fragment, useEffect, useState } from "react";
 import { Form, Input, Select } from "antd";
 import { useFormik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 import {
   getDetailsCoursesEditAction,
-  updateCourseAction,
-  capNhatKhoaHocAction, 
+  capNhatKhoaHocAction,
 } from "../../../../redux/actions/coursesAdminActions";
 import { GROUPID } from "../../../../utilities/Settings/config";
 
@@ -47,12 +45,11 @@ export default function EditCourse(props) {
           formData.append(key, values[key]);
         } else if (values.hinhAnh !== null) {
           formData.append("File", values.hinhAnh, values.hinhAnh.name);
-        }
-        else {
-          alert('Vui lòng chọn ảnh  cho khóa học')
+        } else {
+          alert("Vui lòng chọn ảnh  cho khóa học");
         }
       }
-      console.log({values})
+      console.log({ values });
 
       //Gọi API gửi giá trị FormData về backend
       dispatch(capNhatKhoaHocAction(formData));
@@ -88,7 +85,7 @@ export default function EditCourse(props) {
     <Fragment>
       <div className="py-12">
         <div className="max-w-7xl flex flex-row items-center mx-auto px-4 xl:px-0 sm:px-6 md:px-8">
-        <h3 className="text-4xl">Sửa khoá học</h3>
+          <h3 className="text-4xl">Sửa khoá học</h3>
         </div>
         <div className="max-w-7xl mx-auto xl:px-0 sm:px-6 md:px-8">
           <div

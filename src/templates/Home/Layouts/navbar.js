@@ -9,9 +9,20 @@ import { useTranslation } from "react-i18next";
 import _ from "lodash";
 import { history } from "../../../App";
 import { TOKEN, USER_SIGNIN } from "../../../utilities/Settings/config";
-import { fontSize } from "tailwindcss/defaultTheme";
 
 export default function Navbar({ toggle }) {
+  const HeaderFixed = () => {
+    window.onscroll = function () {
+      const header = document.querySelector(".header");
+      if (window.pageYOffset > 0) {
+        header.classList.add("headerFixed");
+      } else {
+        header.classList.remove("headerFixed");
+      }
+    };
+  };
+  HeaderFixed();
+
   const { arrCateCourse } = useSelector(
     (state) => state.CategoryCoursesReducer
   );
@@ -25,13 +36,8 @@ export default function Navbar({ toggle }) {
   }, []);
 
   const [showModal, setShowModal] = useState(false);
-  const { Option } = Select;
 
-  const { t, i18n } = useTranslation();
-
-  // const handleChangeLanguges = (value) => {
-  //   i18n.changeLanguage(value);
-  // };
+  const { t } = useTranslation();
 
   const renderSignIn = () => {
     if (_.isEmpty(userSignIn)) {
@@ -69,18 +75,18 @@ export default function Navbar({ toggle }) {
             className=" ring-main-500 w-max ring-1 place-self-stretch hover:bg-main-500 text-main-500 hover:text-white 
             transition-colors duration-150 px-4 py-2 lg:text-md xl:text-lg relative rounded-md"
           >
-           {userSignIn?.taiKhoan}
+            {userSignIn?.taiKhoan}
           </button>
 
           <ul
             id="user-menu-dropdown"
             className=" bg-white z-10 border rounded-lg transform lg:text-md xl:text-lg scale-0 focus:scale-100 sm:group-hover:scale-100 absolute 
-            transition duration-150 ease-in-out origin-top-right min-w-32"
+            transition duration-150 ease-in-out origin-top-right min-w-[200px]"
             style={{ right: 0, top: 55, padding: 10 }}
           >
             <li>
               <button
-                className="py-2 px-4 block text-black transition duration-200 rounded-md w-full hover:bg-main-500 hover:text-white text-right"
+                className="py-2 px-4 block text-black transition duration-200 rounded-md w-full hover:bg-main-500 hover:text-white text-left"
                 onClick={() => {
                   history.push("/about");
                 }}
@@ -90,7 +96,7 @@ export default function Navbar({ toggle }) {
             </li>
             <li>
               <button
-                className="py-2 px-4 block text-black transition duration-200 rounded-md w-full hover:bg-main-500 hover:text-white text-right"
+                className="py-2 px-4 block text-black transition duration-200 rounded-md w-full hover:bg-main-500 hover:text-white text-left"
                 onClick={() => {
                   localStorage.removeItem(USER_SIGNIN);
                   localStorage.removeItem(TOKEN);
@@ -105,7 +111,7 @@ export default function Navbar({ toggle }) {
             ) : (
               <li>
                 <button
-                  className="py-2 px-4 block text-black transition duration-200 rounded-md w-full hover:bg-main-500 hover:text-white text-right"
+                  className="py-2 px-4 block text-black transition duration-200 rounded-md w-full hover:bg-main-500 hover:text-white text-left"
                   onClick={() => {
                     history.push("/admin");
                   }}
@@ -137,76 +143,155 @@ export default function Navbar({ toggle }) {
   };
 
   return (
-    <div
-      className="z-10 flex justify-between items-center w-full h-24 
-    lg:fixed top-0 shadow-lg bg-white"
-    >
-      <nav className="ml-3 sm:ml-5 flex justify-between items-center w-full bg-white text-black font-medium">
-        <div className="lg:flex-none">
-          <NavLink to="/">
-            <h1 style={{fontSize:30}} >CYBERSOFT LEARNING</h1>
-          </NavLink>
-        </div>
+    // <div
+    //   className="z-10 flex justify-between items-center w-full h-24
+    // lg:fixed top-0 shadow-lg bg-white"
+    // >
+    //   <nav className="ml-3 sm:ml-5 flex justify-between items-center w-full bg-white text-black font-medium">
+    //     <div className="lg:flex-none">
+    //       <NavLink to="/">
+    //         <h1 style={{ fontSize: 30 }}>CYBERSOFT LEARNING</h1>
+    //       </NavLink>
+    //     </div>
 
-        <div className="lg:inline-flex hidden lg:flex-grow justify-end ml-auto">
-          <NavLink
-            activeClassName="active"
-            exact={true}
-            className="nav-links mx-1 xl:mx-2 my-4 px-4 p-4 lg:text-md xl:text-lg rounded-md font-medium text-black 
-    hover:shadow-lg transition-colors duration-200"
-            to="/"
-          >
-            {t("Trang chủ")}
-          </NavLink>
-          <div className="group inline-flex">
-            <NavLink
-              activeClassName="active"
-              className="nav-links lg:mx-1 xl:mx-2 my-4 px-4 p-4 lg:text-md xl:text-lg rounded-md font-medium text-black 
-    hover:shadow-lg transition-colors duration-200 group relative flex"
-              to="/courses"
-            >
-              {t("Khoá học")}
-              <svg
-                className="w-6 h-6 inline"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </NavLink>
-            <ul
-              className="dropdown-nav bg-white border rounded-md transform scale-0 group-hover:scale-100 absolute 
-            transition duration-150 ease-in-out origin-top min-w-32"
-            >
-              {renderTabCateCourses()}
+    //     <div className="lg:inline-flex hidden lg:flex-grow justify-end ml-auto">
+    //       <NavLink
+    //         activeClassName="active"
+    //         exact={true}
+    //         className="nav-links mx-1 xl:mx-2 my-4 px-4 p-4 lg:text-md xl:text-lg rounded-md font-medium text-black
+    // hover:shadow-lg transition-colors duration-200"
+    //         to="/"
+    //       >
+    //         {t("Trang chủ")}
+    //       </NavLink>
+    //       <div className="group inline-flex">
+    //         <NavLink
+    //           activeClassName="active"
+    //           className="nav-links lg:mx-1 xl:mx-2 my-4 px-4 p-4 lg:text-md xl:text-lg rounded-md font-medium text-black
+    // hover:shadow-lg transition-colors duration-200 group relative flex"
+    //           to="/courses"
+    //         >
+    //           {t("Khoá học")}
+    //           <svg
+    //             className="w-6 h-6 inline"
+    //             fill="none"
+    //             stroke="currentColor"
+    //             viewBox="0 0 24 24"
+    //             xmlns="http://www.w3.org/2000/svg"
+    //           >
+    //             <path
+    //               strokeLinecap="round"
+    //               strokeLinejoin="round"
+    //               strokeWidth={2}
+    //               d="M19 9l-7 7-7-7"
+    //             />
+    //           </svg>
+    //         </NavLink>
+    //         <ul
+    //           className="dropdown-nav bg-white border rounded-md transform scale-0 group-hover:scale-100 absolute
+    //         transition duration-150 ease-in-out origin-top min-w-32"
+    //         >
+    //           {renderTabCateCourses()}
+    //         </ul>
+    //       </div>
+    //       <NavLink
+    //         activeClassName="active"
+    //         className="nav-links lg:mx-1 xl:mx-2 my-4 px-4 p-4 lg:text-md xl:text-lg rounded-md font-medium text-black
+    // hover:shadow-lg transition-colors duration-200"
+    //         to="/contact"
+    //       >
+    //         {t("Liên hệ")}
+    //       </NavLink>
+    //     </div>
+    //     {renderSignIn()}
+    //     <div className="px-4 cursor-pointer lg:hidden ml-4">
+    //       <i
+    //         className="fa fa-bars text-2xl text-main-500"
+    //         aria-hidden="true"
+    //         onClick={toggle}
+    //       />
+    //     </div>
+    //   </nav>
+    // </div>
+
+    <section className="header">
+      <div className="headerLeft">
+        <a aria-current="page" className="textLogo active" href="/">
+          <div className="logo">BC05-NHOM8</div>
+        </a>
+        <form>
+          <input
+            action="#"
+            className="searchForm"
+            type="text"
+            placeholder="Tìm kiếm"
+          />
+        </form>
+      </div>
+      <div className="headerRight lg:hidden">
+        <ul className="menuHeader">
+          <li className="courseCate">
+            <i className="fas fa-bars mr-1" />
+            <a href="/trangchu" aria-current="page" className="active">
+              Danh mục
+            </a>
+            <ul className="courseCateList">
+              <li>
+                <a href="/danhmuckhoahoc/BackEnd">Lập trình Backend</a>
+              </li>
+              <li>
+                <a href="/danhmuckhoahoc/Design">Thiết kế Web</a>
+              </li>
+              <li>
+                <a href="/danhmuckhoahoc/DiDong">Lập trình di động</a>
+              </li>
+              <li>
+                <a href="/danhmuckhoahoc/FrontEnd">Lập trình Front end</a>
+              </li>
+              <li>
+                <a href="/danhmuckhoahoc/FullStack">Lập trình Full Stack</a>
+              </li>
+              <li>
+                <a href="/danhmuckhoahoc/TuDuy">Tư duy lập trình</a>
+              </li>
             </ul>
-          </div>
-          <NavLink
-            activeClassName="active"
-            className="nav-links lg:mx-1 xl:mx-2 my-4 px-4 p-4 lg:text-md xl:text-lg rounded-md font-medium text-black 
-    hover:shadow-lg transition-colors duration-200"
-            to="/contact"
-          >
-            {t("Liên hệ")}
-          </NavLink>
-        </div>
-        {renderSignIn()}
-        <div className="px-4 cursor-pointer lg:hidden ml-4">
+          </li>
+          <li>
+            <a href="/khoahoc">Khóa học</a>
+          </li>
+          <li>
+            <a href="/blog">Blog</a>
+          </li>
+          <li className="eventHeader courseCate">
+            <a href="/sukien">Sự kiện</a>
+            <ul className="courseCateList">
+              <li>
+                <a href="/sukien/lastYear">Sự kiện Sale Cuối Năm</a>
+              </li>
+              <li>
+                <a href="/sukien/Noel">Sự kiện Giáng sinh</a>
+              </li>
+              <li>
+                <a href="/sukien/Noel">Sự kiện Noel</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/thongtin">Thông tin</a>
+          </li>
+        </ul>
+      </div>
+      <div className="showIconHeader">
+        <button className="btnGlobal">{renderSignIn()}</button>
+
+        <div className="px-4 cursor-pointer lg:hidden flex justify-center items-center">
           <i
             className="fa fa-bars text-2xl text-main-500"
             aria-hidden="true"
             onClick={toggle}
           />
         </div>
-      </nav>
-
-    </div>
+      </div>
+    </section>
   );
 }

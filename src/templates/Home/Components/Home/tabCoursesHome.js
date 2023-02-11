@@ -31,7 +31,6 @@ export default function TabCoursesHome(props) {
         (course) =>
           course.danhMucKhoaHoc?.maDanhMucKhoahoc === cateCourses.maDanhMuc
       );
-      console.log({ courseByCate });
       return (
         <TabPane tab={cateCourses.tenDanhMuc} key={index}>
           <section className="text-gray-600 body-font mx-5 ">

@@ -5,37 +5,29 @@ import { Link, NavLink } from "react-router-dom";
 import { Radio, Space } from "antd";
 import { useSelector } from "react-redux";
 import BreadCrumb from "../../../components/Breadcrumbs/Breadcrumbs";
-import { Modal} from 'antd';
-import Swal from 'sweetalert2'
+import { Modal } from "antd";
 
 export default function Checkout(props) {
-
-  const countDown = () =>{
-    let secondsToGo = 3;
-    const modal = Modal.success({
-      title: 'Ghi danh thành công',
-      content: `Thông báo tự động tắt sau ${secondsToGo}s.`,
-    });
-    const timer = setInterval(() => {
-      secondsToGo -= 1;
-      modal.update({
-        content: `Thông báo tự động tắt sau ${secondsToGo}s.`,
-      });
-    }, 1000);
-    setTimeout(() => {
-      clearInterval(timer);
-      modal.destroy();
-    }, secondsToGo * 1000);
-  }
+  // const countDown = () =>{
+  //   let secondsToGo = 3;
+  //   const modal = Modal.success({
+  //     title: 'Ghi danh thành công',
+  //     content: `Thông báo tự động tắt sau ${secondsToGo}s.`,
+  //   });
+  //   const timer = setInterval(() => {
+  //     secondsToGo -= 1;
+  //     modal.update({
+  //       content: `Thông báo tự động tắt sau ${secondsToGo}s.`,
+  //     });
+  //   }, 1000);
+  //   setTimeout(() => {
+  //     clearInterval(timer);
+  //     modal.destroy();
+  //   }, secondsToGo * 1000);
+  // }
   const courseDetail = useSelector(
     (state) => state.CoursesReducer.courseDetail
   );
-
-  const { Panel } = Collapse;
-
-  function callback(key) {
-    console.log(key);
-  }
 
   const [state, setState] = useState({ value: 1 });
 
@@ -77,14 +69,13 @@ export default function Checkout(props) {
                 className="p-5 w-full mt-10"
                 placeholder="Note to Administrator"
               ></textarea>
-              <NavLink to ="/">
-              <button 
-                // countDown={countDown}
-                className="mt-10 py-5 w-full bg-indigo-500 hover:bg-indigo-700 text-lg rounded-md transition duration-150 text-white">
-
-               Đặt hàng
-               
-              </button>
+              <NavLink to="/">
+                <button
+                  // countDown={countDown}
+                  className="mt-10 py-5 w-full bg-indigo-500 hover:bg-indigo-700 text-lg rounded-md transition duration-150 text-white"
+                >
+                  Đặt hàng
+                </button>
               </NavLink>
             </div>
             <div className="relative">
