@@ -1,0 +1,92 @@
+.titleCourse {
+  padding: 50px;
+  text-transform: uppercase;
+  background-color: #ffd60a;
+  color: var(--colorWhite);
+}
+
+.titleCourse p {
+  font-size: 13px;
+}
+
+.coursesContainer,
+.courseListPage {
+  padding: 50px;
+}
+
+.coursesBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--colorWhite);
+  text-transform: uppercase;
+  height: 100%;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.coursesBoxItem {
+  padding: 0;
+}
+
+/* .coursesContainer .col-2 {
+    padding: 0;
+} */
+
+.coursesContainer .row {
+  margin: 0;
+}
+
+.bgStyle1 {
+  background: #264653;
+}
+
+.bgStyle2 {
+  background: #2a9d8f;
+}
+
+.bgStyle3 {
+  background: #e9c46a;
+}
+
+.bgStyle4 {
+  background: #f4a261;
+}
+
+.bgStyle5 {
+  background: #ee8959;
+}
+
+.bgStyle6 {
+  background: #e76f51;
+}
+
+.coursesBox h6 {
+  padding-bottom: 10px;
+}
+
+.coursesBox i {
+  padding-bottom: 10px;
+  font-size: 30px;
+}
+
+.coursesBox p {
+  font-size: 20px;
+}
+
+/* Course List */
+.courseListPage h6 {
+  font-size: 20px;
+}
+.courseListPage h6 i {
+  margin-right: 5px;
+  color: var(--colorTPrimary);
+  font-size: 20px;
+}
+
+.cardEffect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -35,7 +35,7 @@ export default function Footer() {
       <div className="container">
         <LazyLoad>
           <div
-            className="py-10 sm:py-16 px-5 mt-10 sm:mt-0 sm:px-0 mb-12 sm:mb-24 mx-5 sm:mx-0 flex justify-center rounded-3xl"
+            className="mx-5 mt-10 mb-12 flex justify-center rounded-3xl py-10 px-5 sm:mx-0 sm:mt-0 sm:mb-24 sm:py-16 sm:px-0"
             style={{
               backgroundImage: 'url("/images/bgNewsletter.png")',
               backgroundPosition: "center center",
@@ -45,26 +45,26 @@ export default function Footer() {
             }}
           >
             <div className="text-center">
-              <h2 className="text-xl sm:text-5xl text-white font-semibold leading-tight">
+              <h2 className="text-xl font-semibold leading-tight text-white sm:text-5xl">
                 Subscribe For Get Update
                 <br />
                 Every New Courses
               </h2>
-              <p className="text-sm sm:text-xl text-gray-400 leading-normal">
+              <p className="text-sm leading-normal text-gray-400 sm:text-xl">
                 20k+ students daily learn with Cybersoft. Subscribe for new
                 courses.
               </p>
               <form>
-                <div className="mt-7 sm:mt-24 flex flex-row">
+                <div className="mt-7 flex flex-row sm:mt-24">
                   <input
                     type="email"
                     placeholder="example@email.com"
-                    className="w-3/5 px-3 py-2 lg:p-3 rounded-l-lg sm:w-2/3"
+                    className="w-3/5 rounded-l-lg px-3 py-2 sm:w-2/3 lg:p-3"
                   />
                   <button
                     type="submit"
-                    className="bg-purple-600 hover:bg-purple-700 text-white font-semibold text-base p-5 rounded-r-lg transition-colors
-                w-2/5 sm:w-1/3 dark:bg-violet-400 dark:text-coolGray-900"
+                    className="dark:bg-violet-400 dark:text-coolGray-900 w-2/5 rounded-r-lg bg-purple-600 p-5 text-base font-semibold
+                text-white transition-colors hover:bg-purple-700 sm:w-1/3"
                   >
                     Subscribe
                   </button>
@@ -74,14 +74,14 @@ export default function Footer() {
           </div>
         </LazyLoad>
       </div>
-      <footer className="px-4 divide-y dark:bg-coolGray-800 dark:text-coolGray-100 ">
-        <div className="footer container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+      <footer className="dark:bg-coolGray-800 dark:text-coolGray-100 divide-y px-4 ">
+        <div className="footer container mx-auto flex flex-col justify-between space-y-8 py-10 lg:flex-row lg:space-y-0">
           <div className="lg:w-1/3">
             <a
               href="/"
-              className="flex  justify-start sm:justify-center space-x-3 lg:justify-start"
+              className="flex  justify-start space-x-3 sm:justify-center lg:justify-start"
             >
-              <div className="flex items-center justify-start sm:justify-center rounded-full dark:bg-violet-400">
+              <div className="dark:bg-violet-400 flex items-center justify-start rounded-full sm:justify-center">
                 <img
                   className="w-3/4 sm:w-4/5"
                   src="/images/logo.png"
@@ -91,15 +91,15 @@ export default function Footer() {
               </div>
             </a>
           </div>
-          <div className="footer_links grid grid-cols-2 text-lg gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
+          <div className="footer_links grid grid-cols-2 gap-x-3 gap-y-8 text-lg sm:grid-cols-4 lg:w-2/3">
             <div className="footer_links_course space-y-3">
-              <h3 className="font-bold text-lg sm:text-2xl tracking-wide uppercase dark:text-coolGray-50">
+              <h3 className="dark:text-coolGray-50 text-lg font-bold uppercase tracking-wide sm:text-2xl">
                 Khoá học
               </h3>
               <ul className="space-y-1">{renderCateCourses()}</ul>
             </div>
             <div className="footer_links_community space-y-3">
-              <h3 className="font-bold  text-lg sm:text-2xl tracking-wide uppercase dark:text-coolGray-50">
+              <h3 className="dark:text-coolGray-50  text-lg font-bold uppercase tracking-wide sm:text-2xl">
                 Community
               </h3>
               <ul className="space-y-1 text-base sm:text-lg">
@@ -124,7 +124,7 @@ export default function Footer() {
               </ul>
             </div>
             <div className="footer_links_quick space-y-3">
-              <h3 className="font-bold  text-lg sm:text-2xl uppercase dark:text-coolGray-50">
+              <h3 className="dark:text-coolGray-50  text-lg font-bold uppercase sm:text-2xl">
                 Quick links
               </h3>
               <ul className="space-y-1 text-base sm:text-lg">
@@ -146,7 +146,7 @@ export default function Footer() {
               </ul>
             </div>
             <div className="space-y-3">
-              <div className="font-bold  text-lg sm:text-2xl uppercase dark:text-coolGray-50">
+              <div className="dark:text-coolGray-50  text-lg font-bold uppercase sm:text-2xl">
                 Mạng xã hội
               </div>
               <div className="flex justify-start space-x-2">
@@ -209,9 +209,6 @@ export default function Footer() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="footer_copyright py-6 text-sm text-center dark:text-coolGray-400">
-          © 2022 FE71 -<a href="#"> Trúc Ngân Neeee</a>
         </div>
       </footer>
     </Fragment>
