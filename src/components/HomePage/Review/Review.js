@@ -14,7 +14,10 @@ const Review = () => {
             <div className="reviewImg">
               <div className="bgStudentReview" />
               <img
-                src={require("../../../../src/assets/avatarReview.2f5a1f3c.png")}
+                src={
+                  require("../../../../src/assets/avatarReview.2f5a1f3c.png")
+                    .default
+                }
                 alt=""
               />
             </div>

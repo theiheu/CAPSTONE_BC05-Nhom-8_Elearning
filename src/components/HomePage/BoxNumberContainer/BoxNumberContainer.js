@@ -12,11 +12,14 @@ const BoxNumberContainer = () => {
     >
       <div className="boxNumberContainer mt-5">
         <div className="row">
-          <div className="col-lg-3 p-4 col-md-6">
+          <div className="col-lg-3 col-md-6 flex justify-center p-4">
             <div className="boxNumber">
               <div>
                 <img
-                  src={require("../../../../src/assets/003-students.e1a7c67b.png")}
+                  src={
+                    require("../../../../src/assets/003-students.e1a7c67b.png")
+                      .default
+                  }
                   className="imgIcon"
                   alt=""
                 />
@@ -31,11 +34,14 @@ const BoxNumberContainer = () => {
               <p className="textNumberTitle">Học viên</p>
             </div>
           </div>
-          <div className="col-lg-3 p-4 col-md-6">
+          <div className="col-lg-3 col-md-6 flex justify-center p-4">
             <div className="boxNumber">
               <div>
                 <img
-                  src={require("../../../../src/assets/001-timetable.0e009173.png")}
+                  src={
+                    require("../../../../src/assets/001-timetable.0e009173.png")
+                      .default
+                  }
                   className="imgIcon"
                   alt=""
                 />
@@ -50,11 +56,14 @@ const BoxNumberContainer = () => {
               <p className="textNumberTitle">Khóa học</p>
             </div>
           </div>
-          <div className="col-lg-3 p-4 col-md-6">
+          <div className="col-lg-3 col-md-6 flex justify-center p-4">
             <div className="boxNumber">
               <div>
                 <img
-                  src={require("../../../../src/assets/002-hourglass.548810be.png")}
+                  src={
+                    require("../../../../src/assets/002-hourglass.548810be.png")
+                      .default
+                  }
                   className="imgIcon"
                   alt=""
                 />
@@ -69,11 +78,14 @@ const BoxNumberContainer = () => {
               <p className="textNumberTitle">Giờ học</p>
             </div>
           </div>
-          <div className="col-lg-3 p-4 col-md-6">
+          <div className="col-lg-3 col-md-6 flex justify-center p-4">
             <div className="boxNumber">
               <div>
                 <img
-                  src={require("../../../../src/assets/004-teacher.5bbd6eec.png")}
+                  src={
+                    require("../../../../src/assets/004-teacher.5bbd6eec.png")
+                      .default
+                  }
                   className="imgIcon"
                   alt=""
                 />

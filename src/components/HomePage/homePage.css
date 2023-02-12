@@ -432,6 +432,7 @@
 
 /* Img icon Box */
 .imgIcon {
+  margin: 0 auto;
   width: 80px;
   height: 80px;
 }

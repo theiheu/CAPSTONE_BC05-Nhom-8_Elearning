@@ -26,7 +26,10 @@ export const About = () => {
             </p>
           </div>
           <div className="col-md-6 bgAboutGreen">
-            <img src={require("../../assets/hero-flex.553afb64.png")} alt="" />
+            <img
+              src={require("../../assets/hero-flex.553afb64.png").default}
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -34,7 +37,7 @@ export const About = () => {
         <div className="row reAboutItem">
           <div className="col-md-6 bgAboutBlue ">
             <img
-              src={require("../../assets/education-hero.62147e5c.png")}
+              src={require("../../assets/education-hero.62147e5c.png").default}
               alt=""
             />
           </div>
@@ -69,14 +72,20 @@ export const About = () => {
             </p>
           </div>
           <div className="col-md-6 bgAboutGreen">
-            <img src={require("../../assets/olstudy.96378086.png")} alt="" />
+            <img
+              src={require("../../assets/olstudy.96378086.png").default}
+              alt=""
+            />
           </div>
         </div>
       </div>
       <div className="AboutItem">
         <div className="row reAboutItem">
           <div className="col-md-6 bgAboutBlue">
-            <img src={require("../../assets/students.fc2d9ab7.png")} alt="" />
+            <img
+              src={require("../../assets/students.fc2d9ab7.png").default}
+              alt=""
+            />
           </div>
           <div className="col-md-6">
             <h6>Sứ mệnh V learning</h6>

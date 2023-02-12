@@ -40,7 +40,7 @@ const CourseItem = (item) => {
             <div className="imgCardFooter">
               <img
                 className
-                src={require("../../assets/avatar2.bb9626e2.png")}
+                src={require("../../assets/avatar2.bb9626e2.png").default}
                 alt=""
               />
             </div>

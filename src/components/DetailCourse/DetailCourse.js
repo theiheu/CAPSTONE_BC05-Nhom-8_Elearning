@@ -34,7 +34,9 @@ export const DetailCourse = () => {
                 <div className="detailCourseIntro">
                   <div>
                     <img
-                      src={require("../../assets/instrutor5.2e4bd1e6.jpg")}
+                      src={
+                        require("../../assets/instrutor5.2e4bd1e6.jpg").default
+                      }
                       alt=""
                     />
                   </div>
@@ -395,11 +397,11 @@ export const DetailCourse = () => {
                 <div className="titleMaker">
                   <div className="imgCardFooter">
                     <img
-                      src={require("../../assets/emoji.6d1b7051.png")}
+                      src={require("../../assets/emoji.6d1b7051.png").default}
                       alt=""
                     />
                   </div>
-                  <span className="ml-2 colorCardTitle">Elon Musk</span>
+                  <span className="colorCardTitle ml-2">Elon Musk</span>
                 </div>
                 <div>
                   <p>
@@ -414,11 +416,11 @@ export const DetailCourse = () => {
               <div className="subCard">
                 <div className="subCardHead">
                   <img
-                    //   src={require("../../assets/emoji.6d1b7051.png")}
-                    src={require("../../assets/emoji.6d1b7051.png")}
+                    //   src={require("../../assets/emoji.6d1b7051.png").default}
+                    src={require("../../assets/emoji.6d1b7051.png").default}
                     alt=""
                   />
-                  <span className="ml-1 colorCardTitle">Elun Musk Ricard</span>
+                  <span className="colorCardTitle ml-1">Elun Musk Ricard</span>
                 </div>
                 <h6>BOOTCAMP - LẬP TRÌNH FULL STACK TỪ ZERO ĐẾN CÓ VIỆC</h6>
                 <p className="colorCardTitle">
@@ -475,12 +477,12 @@ export const DetailCourse = () => {
                 <div className="titleMaker">
                   <div className="imgCardFooter">
                     <img
-                      //   src={require("../../../src/assets/avatar2.bb9626e2.png")}
-                      src={require("../../assets/emoji.6d1b7051.png")}
+                      //   src={require("../../../src/assets/avatar2.bb9626e.default2.png")}
+                      src={require("../../assets/emoji.6d1b7051.png").default}
                       alt=""
                     />
                   </div>
-                  <span className="ml-2 colorCardTitle">Elon Musk</span>
+                  <span className="colorCardTitle ml-2">Elon Musk</span>
                 </div>
                 <div>
                   <p>
@@ -495,11 +497,11 @@ export const DetailCourse = () => {
               <div className="subCard">
                 <div className="subCardHead">
                   <img
-                    //   src={require("../../assets/emoji.6d1b7051.png")}
-                    src={require("../../assets/emoji.6d1b7051.png")}
+                    //   src={require("../../assets/emoji.6d1b7051.png").default}
+                    src={require("../../assets/emoji.6d1b7051.png").default}
                     alt=""
                   />
-                  <span className="ml-1 colorCardTitle">Elun Musk Ricard</span>
+                  <span className="colorCardTitle ml-1">Elun Musk Ricard</span>
                 </div>
                 <h6>BOOTCAMP - LẬP TRÌNH FULL STACK TỪ ZERO ĐẾN CÓ VIỆC</h6>
                 <p className="colorCardTitle">
@@ -556,12 +558,12 @@ export const DetailCourse = () => {
                 <div className="titleMaker">
                   <div className="imgCardFooter">
                     <img
-                      //   src={require("../../../src/assets/avatar2.bb9626e2.png")}
-                      src={require("../../assets/emoji.6d1b7051.png")}
+                      //   src={require("../../../src/assets/avatar2.bb9626e.default2.png")}
+                      src={require("../../assets/emoji.6d1b7051.png").default}
                       alt=""
                     />
                   </div>
-                  <span className="ml-2 colorCardTitle">Elon Musk</span>
+                  <span className="colorCardTitle ml-2">Elon Musk</span>
                 </div>
                 <div>
                   <p>
@@ -576,11 +578,11 @@ export const DetailCourse = () => {
               <div className="subCard">
                 <div className="subCardHead">
                   <img
-                    //   src={require("../../assets/emoji.6d1b7051.png")}
-                    src={require("../../assets/emoji.6d1b7051.png")}
+                    //   src={require("../../assets/emoji.6d1b7051.png").default}
+                    src={require("../../assets/emoji.6d1b7051.png").default}
                     alt=""
                   />
-                  <span className="ml-1 colorCardTitle">Elun Musk Ricard</span>
+                  <span className="colorCardTitle ml-1">Elun Musk Ricard</span>
                 </div>
                 <h6>BOOTCAMP - LẬP TRÌNH FULL STACK TỪ ZERO ĐẾN CÓ VIỆC</h6>
                 <p className="colorCardTitle">
@@ -637,11 +639,11 @@ export const DetailCourse = () => {
                 <div className="titleMaker">
                   <div className="imgCardFooter">
                     <img
-                      src={require("../../assets/emoji.6d1b7051.png")}
+                      src={require("../../assets/emoji.6d1b7051.png").default}
                       alt=""
                     />
                   </div>
-                  <span className="ml-2 colorCardTitle">Elon Musk</span>
+                  <span className="colorCardTitle ml-2">Elon Musk</span>
                 </div>
                 <div>
                   <p>
@@ -656,10 +658,10 @@ export const DetailCourse = () => {
               <div className="subCard">
                 <div className="subCardHead">
                   <img
-                    src={require("../../assets/emoji.6d1b7051.png")}
+                    src={require("../../assets/emoji.6d1b7051.png").default}
                     alt=""
                   />
-                  <span className="ml-1 colorCardTitle">Elun Musk Ricard</span>
+                  <span className="colorCardTitle ml-1">Elun Musk Ricard</span>
                 </div>
                 <h6>BOOTCAMP - LẬP TRÌNH FULL STACK TỪ ZERO ĐẾN CÓ VIỆC</h6>
                 <p className="colorCardTitle">

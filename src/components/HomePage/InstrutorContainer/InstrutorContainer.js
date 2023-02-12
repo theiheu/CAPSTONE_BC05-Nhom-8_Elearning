@@ -2,7 +2,7 @@ import React from "react";
 
 const InstrutorContainer = () => {
   return (
-    <div className="mt-5 instrutorContainer">
+    <div className="instrutorContainer mt-5">
       <h6>
         <a href="">Giảng viên hàng đầu</a>
       </h6>
@@ -12,7 +12,10 @@ const InstrutorContainer = () => {
           <div className="col-lg-2 col-md-3 col-sm-6 col-12">
             <div className="instrutorContent">
               <img
-                src={require("../../../../src/assets/instrutor5.2e4bd1e6.jpg")}
+                src={
+                  require("../../../../src/assets/instrutor5.2e4bd1e6.jpg")
+                    .default
+                }
                 alt=""
               />
               <h6>Big DadMoon</h6>
@@ -34,7 +37,10 @@ const InstrutorContainer = () => {
           <div className="col-lg-2 col-md-3 col-sm-6 col-12">
             <div className="instrutorContent">
               <img
-                src={require("../../../../src/assets/instrutor6.64041dca.jpg")}
+                src={
+                  require("../../../../src/assets/instrutor6.64041dca.jpg")
+                    .default
+                }
                 alt=""
               />
               <h6>IcarDi MenBor</h6>
@@ -56,7 +62,10 @@ const InstrutorContainer = () => {
           <div className="col-lg-2 col-md-3 col-sm-6 col-12">
             <div className="instrutorContent">
               <img
-                src={require("../../../../src/assets/instrutor7.edd00a03.jpg")}
+                src={
+                  require("../../../../src/assets/instrutor7.edd00a03.jpg")
+                    .default
+                }
                 alt=""
               />
               <h6>Bladin Slaham</h6>
@@ -78,7 +87,10 @@ const InstrutorContainer = () => {
           <div className="col-lg-2 col-md-3 col-sm-6 col-12">
             <div className="instrutorContent">
               <img
-                src={require("../../../../src/assets/instrutor8.aec2f526.jpg")}
+                src={
+                  require("../../../../src/assets/instrutor8.aec2f526.jpg")
+                    .default
+                }
                 alt=""
               />
               <h6>Chris Andersan</h6>
@@ -100,7 +112,10 @@ const InstrutorContainer = () => {
           <div className="col-lg-2 col-md-3 col-sm-6 col-12">
             <div className="instrutorContent">
               <img
-                src={require("../../../../src/assets/instrutor9.504ea6c5.jpg")}
+                src={
+                  require("../../../../src/assets/instrutor9.504ea6c5.jpg")
+                    .default
+                }
                 alt=""
               />
               <h6>VueLo Gadi</h6>
@@ -122,7 +137,10 @@ const InstrutorContainer = () => {
           <div className="col-lg-2 col-md-3 col-sm-6 col-12">
             <div className="instrutorContent">
               <img
-                src={require("../../../../src/assets/instrutor10.89946c43.jpg")}
+                src={
+                  require("../../../../src/assets/instrutor10.89946c43.jpg")
+                    .default
+                }
                 alt=""
               />
               <h6>Hoàng Nam</h6>
@@ -144,7 +162,10 @@ const InstrutorContainer = () => {
           <div className="col-lg-2 col-md-3 col-sm-6 col-12">
             <div className="instrutorContent">
               <img
-                src={require("../../../../src/assets/instrutor11.0387fe65.jpg")}
+                src={
+                  require("../../../../src/assets/instrutor11.0387fe65.jpg")
+                    .default
+                }
                 alt=""
               />
               <h6>David Ngô Savani</h6>

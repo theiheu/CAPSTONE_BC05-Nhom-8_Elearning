@@ -42,10 +42,10 @@ export default function Navbar({ toggle }) {
   const renderSignIn = () => {
     if (_.isEmpty(userSignIn)) {
       return (
-        <div className="flex ml-auto">
+        <div className="ml-auto flex">
           <button
-            className="text-main-500 w-max sm:px-4 sm:py-2 p-3 text-xs lg:text-md xl:text-lg 
-            mr-2 rounded-md ring-1 ring-main-500 hover:bg-main-500 hover:text-white transition-colors duration-150"
+            className="lg:text-md mr-2 w-max rounded-md p-3 text-xs text-main-500 ring-1 
+            ring-main-500 transition-colors duration-150 hover:bg-main-500 hover:text-white sm:px-4 sm:py-2 xl:text-lg"
             onClick={() => {
               setShowModal(!showModal);
             }}
@@ -57,7 +57,7 @@ export default function Navbar({ toggle }) {
           )}
           <Link
             activeClassName="active"
-            className="w-max text-center font-normal hover:shadow-xl lg:text-md xl:text-lg sm:px-4 sm:py-2 p-3 text-xs rounded-md bg-main-500 text-white hover:text-white"
+            className="lg:text-md w-max rounded-md bg-main-500 p-3 text-center text-xs font-normal text-white hover:text-white hover:shadow-xl sm:px-4 sm:py-2 xl:text-lg"
             to="/signup"
           >
             {t("Đăng ký")}
@@ -68,25 +68,25 @@ export default function Navbar({ toggle }) {
       return (
         <div
           tabindex="0"
-          className="inline-flex group ml-auto sm:mx-2 relative"
+          className="group relative ml-auto inline-flex sm:mx-2"
         >
           <button
             id="user-menu"
-            className=" ring-main-500 w-max ring-1 place-self-stretch hover:bg-main-500 text-main-500 hover:text-white 
-            transition-colors duration-150 px-4 py-2 lg:text-md xl:text-lg relative rounded-md"
+            className=" lg:text-md relative w-max place-self-stretch rounded-md px-4 py-2 
+            text-main-500 ring-1 ring-main-500 transition-colors duration-150 hover:bg-main-500 hover:text-white xl:text-lg"
           >
             {userSignIn?.taiKhoan}
           </button>
 
           <ul
             id="user-menu-dropdown"
-            className=" bg-white z-10 border rounded-lg transform lg:text-md xl:text-lg scale-0 focus:scale-100 sm:group-hover:scale-100 absolute 
-            transition duration-150 ease-in-out origin-top-right min-w-[200px]"
+            className=" lg:text-md absolute z-10 min-w-[200px] origin-top-right scale-0 transform rounded-lg border bg-white transition 
+            duration-150 ease-in-out focus:scale-100 sm:group-hover:scale-100 xl:text-lg"
             style={{ right: 0, top: 55, padding: 10 }}
           >
             <li>
               <button
-                className="py-2 px-4 block text-black transition duration-200 rounded-md w-full hover:bg-main-500 hover:text-white text-left"
+                className="block w-full rounded-md py-2 px-4 text-left text-black transition duration-200 hover:bg-main-500 hover:text-white"
                 onClick={() => {
                   history.push("/about");
                 }}
@@ -96,7 +96,7 @@ export default function Navbar({ toggle }) {
             </li>
             <li>
               <button
-                className="py-2 px-4 block text-black transition duration-200 rounded-md w-full hover:bg-main-500 hover:text-white text-left"
+                className="block w-full rounded-md py-2 px-4 text-left text-black transition duration-200 hover:bg-main-500 hover:text-white"
                 onClick={() => {
                   localStorage.removeItem(USER_SIGNIN);
                   localStorage.removeItem(TOKEN);
@@ -111,7 +111,7 @@ export default function Navbar({ toggle }) {
             ) : (
               <li>
                 <button
-                  className="py-2 px-4 block text-black transition duration-200 rounded-md w-full hover:bg-main-500 hover:text-white text-left"
+                  className="block w-full rounded-md py-2 px-4 text-left text-black transition duration-200 hover:bg-main-500 hover:text-white"
                   onClick={() => {
                     history.push("/admin");
                   }}
@@ -132,7 +132,7 @@ export default function Navbar({ toggle }) {
         <li key={index}>
           <NavLink
             activeClassName="active"
-            className="sub-link-menu my-1 lg:text-md xl:text-lg py-2 px-4 block text-black transition duration-200 rounded-md w-full;"
+            className="sub-link-menu lg:text-md w-full; my-1 block rounded-md py-2 px-4 text-black transition duration-200 xl:text-lg"
             to={`/courses/${cateCourses.maDanhMuc}`}
           >
             {cateCourses.tenDanhMuc}
@@ -282,9 +282,9 @@ export default function Navbar({ toggle }) {
         </ul>
       </div>
       <div className="showIconHeader">
-        <button className="btnGlobal">{renderSignIn()}</button>
+        <button className="btnGlobal hidden lg:block">{renderSignIn()}</button>
 
-        <div className="px-4 cursor-pointer lg:hidden flex justify-center items-center">
+        <div className="flex cursor-pointer items-center justify-center px-4 lg:hidden">
           <i
             className="fa fa-bars text-2xl text-main-500"
             aria-hidden="true"

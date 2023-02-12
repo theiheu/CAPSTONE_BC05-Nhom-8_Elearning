@@ -4,803 +4,258 @@ const CoursesHome = () => {
   return (
     <Fragment>
       <div className="coursesHome">
-        <h6>
+        <h1>
           <a href>Khóa học phổ biến</a>
-        </h6>
+          <hr />
+        </h1>
       </div>
-
-      <div className="row mt-4">
-        <div className="col-md-6 col-xl-3 cardGlobalRes mt-4 cardEffect">
-          <a className="cardGlobal" href="/chitiet/1234511">
-            <img
-              src="https://elearningnew.cybersoft.edu.vn/hinhanh/tailwind-css_gp01.jpg"
-              alt=""
-            />
-            <span className="stikerCard">Tailwind CSS </span>
-            <div className="cardBodyGlobal">
-              <h6>tailwind là một thư viện hỗ trợ cực kỳ phổ biến và...</h6>
-              <div className="titleMaker">
-                <div className="imgCardFooter">
-                  <img
-                    src={require("../../../../src/assets/avatar2.bb9626e2.png")}
-                    alt=""
-                  />
-                </div>
-                <span className="ml-2 colorCardTitle">Elon Musk</span>
-              </div>
-            </div>
-            <div className="cardFooter">
-              <div>
-                <p>
-                  800.000<sup>đ</sup>
-                </p>
-                <p>
-                  400.000<sup>đ</sup>
-                </p>
-              </div>
-              <div>
-                <i className="fas fa-star mr-1 textStar" />
-                <span className="textStar">4.9</span>
-                <span className="colorCardTitle">(7840)</span>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div className="col-md-6 col-xl-3 cardGlobalRes mt-4 cardEffect">
-          <a className="cardGlobal" href="/chitiet/123456Coursess">
-            <img
-              src="https://elearningnew.cybersoft.edu.vn/hinhanh/nodejs.jpg"
-              alt=""
-            />
-            <span className="stikerCard">NodeJS</span>
-            <div className="cardBodyGlobal">
-              <h6>Lập trình hiện đang là xu hướng trên toàn thế giới...</h6>
-              <div className="titleMaker">
-                <div className="imgCardFooter">
-                  <img
-                    src={require("../../../../src/assets/avatar2.bb9626e2.png")}
-                    alt=""
-                  />
-                </div>
-                <span className="ml-2 colorCardTitle">Elon Musk</span>
-              </div>
-            </div>
-            <div className="cardFooter">
-              <div>
-                <p>
-                  800.000<sup>đ</sup>
-                </p>
-                <p>
-                  400.000<sup>đ</sup>
-                </p>
-              </div>
-              <div>
-                <i className="fas fa-star mr-1 textStar" />
-                <span className="textStar">4.9</span>
-                <span className="colorCardTitle">(7840)</span>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div className="col-md-6 col-xl-3 cardGlobalRes mt-4 cardEffect">
-          <a className="cardGlobal" href="/chitiet/123859">
-            <img
-              src="https://elearningnew.cybersoft.edu.vn/hinhanh/hoc-lap-trinh-java-chuyen-nghiep_gp01.png"
-              alt=""
-            />
-            <span className="stikerCard">Học Lập Trình JAVA Chuyên Nghiệp</span>
-            <div className="cardBodyGlobal">
-              <h6>Lập trình hiện đang là xu hướng trên toàn thế giới...</h6>
-              <div className="titleMaker">
-                <div className="imgCardFooter">
-                  <img
-                    src={require("../../../../src/assets/avatar2.bb9626e2.png")}
-                    alt=""
-                  />
-                </div>
-                <span className="ml-2 colorCardTitle">Elon Musk</span>
-              </div>
-            </div>
-            <div className="cardFooter">
-              <div>
-                <p>
-                  800.000<sup>đ</sup>
-                </p>
-                <p>
-                  400.000<sup>đ</sup>
-                </p>
-              </div>
-              <div>
-                <i className="fas fa-star mr-1 textStar" />
-                <span className="textStar">4.9</span>
-                <span className="colorCardTitle">(7840)</span>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div className="col-md-6 col-xl-3 cardGlobalRes mt-4 cardEffect">
-          <a className="cardGlobal" href="/chitiet/1270eb53ae663">
-            <img
-              src="https://elearningnew.cybersoft.edu.vn/hinhanh/lap-trinh-full-stack.jpg"
-              alt=""
-            />
-            <span className="stikerCard">Lập Trình Full Stack</span>
-            <div className="cardBodyGlobal">
-              <h6>Duy nhất tại CyberSoft đào tạo trọn bộ ReactJS the...</h6>
-              <div className="titleMaker">
-                <div className="imgCardFooter">
-                  <img
-                    src={require("../../../../src/assets/avatar2.bb9626e2.png")}
-                    alt=""
-                  />
-                </div>
-                <span className="ml-2 colorCardTitle">Elon Musk</span>
-              </div>
-            </div>
-            <div className="cardFooter">
-              <div>
-                <p>
-                  800.000<sup>đ</sup>
-                </p>
-                <p>
-                  400.000<sup>đ</sup>
-                </p>
-              </div>
-              <div>
-                <i className="fas fa-star mr-1 textStar" />
-                <span className="textStar">4.9</span>
-                <span className="colorCardTitle">(7840)</span>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div className="mt-5">
-        <h6>
-          <a href>Khóa học tham khảo</a>
-        </h6>
-        <div className="row">
-          <div className="col-md-6 col-xl-3 cardGlobalRes mt-4">
-            <a className="cardGlobal " href="/chitiet/1312">
-              <img
-                src="https://elearningnew.cybersoft.edu.vn/hinhanh/reactjs.jpg"
-                alt=""
-              />
-              <span className="stikerCard">ReactJS</span>
-              <div className="cardBodyGlobal">
-                <h6>Lập trình hiện đang là xu hướng trên toàn thế giới...</h6>
-                <div className="cardIcon">
-                  <span>
-                    <i className="far fa-clock iconOclock" />8 giờ
-                  </span>
-                  <span>
-                    <i className="far fa-calendar-alt iconCalendar" />4 tuần
-                  </span>
-                  <span>
-                    <i className="fas fa-signal iconLevel" />
-                    Tất cả
-                  </span>
-                </div>
-              </div>
-              <div className="cardFooter">
-                <div className="titleMaker">
-                  <div className="imgCardFooter">
-                    <img
-                      src={require("../../../../src/assets/avatar2.bb9626e2.png")}
-                      alt=""
-                    />
-                  </div>
-                  <span className="ml-2 colorCardTitle">Elon Musk</span>
-                </div>
-                <div>
-                  <p>
-                    800.000<sup>đ</sup>
-                  </p>
-                  <p>
-                    400.000<sup>đ</sup>
-                    <i className="fas fa-tag iconTag" />
-                  </p>
-                </div>
-              </div>
-              <div className="subCard">
-                <div className="subCardHead">
-                  <img
-                    src={require("../../../../src/assets/emoji.6d1b7051.png")}
-                    alt=""
-                  />
-                  <span className="ml-1 colorCardTitle">Elun Musk Ricard</span>
-                </div>
-                <h6>BOOTCAMP - LẬP TRÌNH FULL STACK TỪ ZERO ĐẾN CÓ VIỆC</h6>
-                <p className="colorCardTitle">
-                  Đã có hơn 6200 bạn đăng kí học và có việc làm thông qua chương
-                  trình đào tạo Bootcamp Lập trình Front End chuyên nghiệp. Khóa
-                  học 100% thực hành cường độ cao theo dự án thực tế và kết nối
-                  doanh nghiệp hỗ trợ tìm việc ngay sau khi học...
-                </p>
-                <div className="cardIcon">
-                  <span>
-                    <i className="far fa-clock iconOclock" />8 giờ
-                  </span>
-                  <span>
-                    <i className="far fa-calendar-alt iconCalendar" />4 tuần
-                  </span>
-                  <span>
-                    <i className="fas fa-signal iconLevel" />
-                    Tất cả
-                  </span>
-                </div>
-
-                <button className="btnGlobal btnSubCard">
-                  <a href="/chitiet/1312">Xem chi tiết</a>
-                </button>
-              </div>
-              <div className="cardSale">
-                <span>Yêu thích</span>
-              </div>
-            </a>
-          </div>
-          <div className="col-md-6 col-xl-3 cardGlobalRes mt-4">
-            <a
-              className="cardGlobal moveSubCard "
-              href="/chitiet/241120222210491"
+      <div className="body-font flex flex-col items-center text-gray-600">
+        <div className="container mx-auto mb-8 py-8 px-3 sm:mb-0 sm:py-16 lg:mb-12">
+          <div className="grid sm:grid-cols-2 lg:-m-4 lg:grid-cols-4">
+            <div
+              key={""}
+              className="courses-each-cate relative mx-2 mt-4 rounded-md border-2 bg-white px-6 py-12 shadow-xl lg:mx-5 lg:mb-12 lg:rounded-3xl"
             >
-              <img
-                src="https://elearningnew.cybersoft.edu.vn/hinhanh/ngon-ngu-may-tinh.jpg"
-                alt=""
-              />
-              <span className="stikerCard">Lập trình web</span>
-              <div className="cardBodyGlobal">
-                <h6>Lập trình hiện đang là xu hướng trên toàn thế giới...</h6>
-                <div className="cardIcon">
-                  <span>
-                    <i className="far fa-clock iconOclock" />8 giờ
-                  </span>
-                  <span>
-                    <i className="far fa-calendar-alt iconCalendar" />4 tuần
-                  </span>
-                  <span>
-                    <i className="fas fa-signal iconLevel" />
-                    Tất cả
-                  </span>
-                </div>
-              </div>
-              <div className="cardFooter">
-                <div className="titleMaker">
-                  <div className="imgCardFooter">
-                    <img
-                      src={require("../../../../src/assets/avatar2.bb9626e2.png")}
-                      alt=""
-                    />
-                  </div>
-                  <span className="ml-2 colorCardTitle">Elon Musk</span>
-                </div>
-                <div>
-                  <p>
-                    800.000<sup>đ</sup>
-                  </p>
-                  <p>
-                    400.000<sup>đ</sup>
-                    <i className="fas fa-tag iconTag" />
-                  </p>
-                </div>
-              </div>
-              <div className="subCard">
-                <div className="subCardHead">
-                  <img
-                    src={require("../../../../src/assets/emoji.6d1b7051.png")}
-                    alt=""
-                  />
-                  <span className="ml-1 colorCardTitle">Elun Musk Ricard</span>
-                </div>
-                <h6>BOOTCAMP - LẬP TRÌNH FULL STACK TỪ ZERO ĐẾN CÓ VIỆC</h6>
-                <p className="colorCardTitle">
-                  Đã có hơn 6200 bạn đăng kí học và có việc làm thông qua chương
-                  trình đào tạo Bootcamp Lập trình Front End chuyên nghiệp. Khóa
-                  học 100% thực hành cường độ cao theo dự án thực tế và kết nối
-                  doanh nghiệp hỗ trợ tìm việc ngay sau khi học...
+              <div className="text-center">
+                <p className="mb-4 w-fit rounded-md bg-indigo-100 py-2 px-3 text-center text-xs text-purple-700 lg:rounded-lg">
+                  {"TailwindCss"}
                 </p>
-                <div className="cardIcon">
-                  <span>
-                    <i className="far fa-clock iconOclock" />8 giờ
-                  </span>
-                  <span>
-                    <i className="far fa-calendar-alt iconCalendar" />4 tuần
-                  </span>
-                  <span>
-                    <i className="fas fa-signal iconLevel" />
-                    Tất cả
-                  </span>
-                </div>
+                <img
+                  src="https://elearningnew.cybersoft.edu.vn/hinhanh/tailwind-css_gp01.jpg"
+                  alt={""}
+                  className="mb-8 inline-block w-full rounded-lg object-cover object-center"
+                  style={{
+                    maxHeight: "150px",
+                    minHeight: "150px",
+                    border: "1px solid #eee",
+                  }}
+                />
+                <h2 className="courses-each-cate-heading text-lg font-bold sm:text-3xl">
+                  TailwindCss
+                </h2>
 
-                <button className="btnGlobal btnSubCard">
-                  <a href="/chitiet/1312">Xem chi tiết</a>
-                </button>
-              </div>
-              <div className="cardSale">
-                <span>Yêu thích</span>
-              </div>
-            </a>
-          </div>
-          <div className="col-md-6 col-xl-3 cardGlobalRes mt-4">
-            <a className="cardGlobal " href="/chitiet/241120222224156">
-              <img
-                src="https://elearningnew.cybersoft.edu.vn/hinhanh/full-stack.jpg"
-                alt=""
-              />
-              <span className="stikerCard">Full Stack</span>
-              <div className="cardBodyGlobal">
-                <h6>CyberSoft đã giúp được hơn 3800 học viên bị lan ma...</h6>
-                <div className="cardIcon">
-                  <span>
-                    <i className="far fa-clock iconOclock" />8 giờ
-                  </span>
-                  <span>
-                    <i className="far fa-calendar-alt iconCalendar" />4 tuần
-                  </span>
-                  <span>
-                    <i className="fas fa-signal iconLevel" />
-                    Tất cả
-                  </span>
-                </div>
-              </div>
-              <div className="cardFooter">
-                <div className="titleMaker">
-                  <div className="imgCardFooter">
-                    <img
-                      src={require("../../../../src/assets/avatar2.bb9626e2.png")}
-                      alt=""
-                    />
+                <div className="cardBodyGlobal">
+                  <h6>tailwind là một thư viện hỗ trợ cực kỳ phổ biến và...</h6>
+                  <div className="titleMaker">
+                    <div className="imgCardFooter">
+                      <img
+                        src={
+                          require("../../../../src/assets/avatar2.bb9626e2.png")
+                            .default
+                        }
+                        alt=""
+                      />
+                    </div>
+                    <span className="colorCardTitle ml-2">Elon Musk</span>
                   </div>
-                  <span className="ml-2 colorCardTitle">Elon Musk</span>
                 </div>
-                <div>
-                  <p>
-                    800.000<sup>đ</sup>
-                  </p>
-                  <p>
-                    400.000<sup>đ</sup>
-                    <i className="fas fa-tag iconTag" />
-                  </p>
-                </div>
-              </div>
-              <div className="subCard">
-                <div className="subCardHead">
-                  <img
-                    src={require("../../../../src/assets/emoji.6d1b7051.png")}
-                    alt=""
-                  />
-                  <span className="ml-1 colorCardTitle">Elun Musk Ricard</span>
-                </div>
-                <h6>BOOTCAMP - LẬP TRÌNH FULL STACK TỪ ZERO ĐẾN CÓ VIỆC</h6>
-                <p className="colorCardTitle">
-                  Đã có hơn 6200 bạn đăng kí học và có việc làm thông qua chương
-                  trình đào tạo Bootcamp Lập trình Front End chuyên nghiệp. Khóa
-                  học 100% thực hành cường độ cao theo dự án thực tế và kết nối
-                  doanh nghiệp hỗ trợ tìm việc ngay sau khi học...
-                </p>
-                <div className="cardIcon">
-                  <span>
-                    <i className="far fa-clock iconOclock" />8 giờ
-                  </span>
-                  <span>
-                    <i className="far fa-calendar-alt iconCalendar" />4 tuần
-                  </span>
-                  <span>
-                    <i className="fas fa-signal iconLevel" />
-                    Tất cả
-                  </span>
-                </div>
-
-                <button className="btnGlobal btnSubCard">
-                  <a href="/chitiet/1312">Xem chi tiết</a>
-                </button>
-              </div>
-              <div className="cardSale">
-                <span>Yêu thích</span>
-              </div>
-            </a>
-          </div>
-          <div className="col-md-6 col-xl-3 cardGlobalRes mt-4">
-            <a className="cardGlobal moveSubCard " href="/chitiet/266656">
-              <img
-                src="https://elearningnew.cybersoft.edu.vn/hinhanh/bc32-fe.png"
-                alt=""
-              />
-              <span className="stikerCard">BC32 FE</span>
-              <div className="cardBodyGlobal">
-                <h6>Lập trình hiện đang là xu hướng trên toàn thế giới...</h6>
-                <div className="cardIcon">
-                  <span>
-                    <i className="far fa-clock iconOclock" />8 giờ
-                  </span>
-                  <span>
-                    <i className="far fa-calendar-alt iconCalendar" />4 tuần
-                  </span>
-                  <span>
-                    <i className="fas fa-signal iconLevel" />
-                    Tất cả
-                  </span>
-                </div>
-              </div>
-              <div className="cardFooter">
-                <div className="titleMaker">
-                  <div className="imgCardFooter">
-                    <img
-                      src={require("../../../../src/assets/avatar2.bb9626e2.png")}
-                      alt=""
-                    />
+                <div className="cardFooter">
+                  <div>
+                    <p>
+                      800.000<sup>đ</sup>
+                    </p>
+                    <p>
+                      400.000<sup>đ</sup>
+                    </p>
                   </div>
-                  <span className="ml-2 colorCardTitle">Elon Musk</span>
-                </div>
-                <div>
-                  <p>
-                    800.000<sup>đ</sup>
-                  </p>
-                  <p>
-                    400.000<sup>đ</sup>
-                    <i className="fas fa-tag iconTag" />
-                  </p>
-                </div>
-              </div>
-              <div className="subCard">
-                <div className="subCardHead">
-                  <img
-                    src={require("../../../../src/assets/emoji.6d1b7051.png")}
-                    alt=""
-                  />
-                  <span className="ml-1 colorCardTitle">Elun Musk Ricard</span>
-                </div>
-                <h6>BOOTCAMP - LẬP TRÌNH FULL STACK TỪ ZERO ĐẾN CÓ VIỆC</h6>
-                <p className="colorCardTitle">
-                  Đã có hơn 6200 bạn đăng kí học và có việc làm thông qua chương
-                  trình đào tạo Bootcamp Lập trình Front End chuyên nghiệp. Khóa
-                  học 100% thực hành cường độ cao theo dự án thực tế và kết nối
-                  doanh nghiệp hỗ trợ tìm việc ngay sau khi học...
-                </p>
-                <div className="cardIcon">
-                  <span>
-                    <i className="far fa-clock iconOclock" />8 giờ
-                  </span>
-                  <span>
-                    <i className="far fa-calendar-alt iconCalendar" />4 tuần
-                  </span>
-                  <span>
-                    <i className="fas fa-signal iconLevel" />
-                    Tất cả
-                  </span>
-                </div>
-
-                <button className="btnGlobal btnSubCard">
-                  <a href="/chitiet/1312">Xem chi tiết</a>
-                </button>
-              </div>
-              <div className="cardSale">
-                <span>Yêu thích</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className="mt-5">
-        <h6>
-          <a href>Khóa học Front End React Js</a>
-        </h6>
-        <div className="row">
-          <div className="col-md-6 col-xl-3 cardGlobalRes mt-4">
-            <a className="cardGlobal" href="/chitiet/241120222224156">
-              <img
-                src="https://elearningnew.cybersoft.edu.vn/hinhanh/full-stack.jpg"
-                alt=""
-              />
-              <span className="stikerCard">Full Stack</span>
-              <div className="cardBodyGlobal">
-                <h6>CyberSoft đã giúp được hơn 3800 học viên bị lan ma...</h6>
-                <div className="cardIcon">
-                  <span>
-                    <i className="far fa-clock iconOclock" />8 giờ
-                  </span>
-                  <span>
-                    <i className="far fa-calendar-alt iconCalendar" />4 tuần
-                  </span>
-                  <span>
-                    <i className="fas fa-signal iconLevel" />
-                    Tất cả
-                  </span>
-                </div>
-              </div>
-              <div className="cardFooter">
-                <div className="titleMaker">
-                  <div className="imgCardFooter">
-                    <img
-                      src={require("../../../../src/assets/avatar2.bb9626e2.png")}
-                      alt=""
-                    />
+                  <div>
+                    <i className="fas fa-star textStar mr-1" />
+                    <span className="textStar">4.9</span>
+                    <span className="colorCardTitle">(7840)</span>
                   </div>
-                  <span className="ml-2 colorCardTitle">Elon Musk</span>
                 </div>
-                <div>
-                  <p>
-                    800.000<sup>đ</sup>
-                  </p>
-                  <p>
-                    400.000<sup>đ</sup>
-                    <i className="fas fa-tag iconTag" />
-                  </p>
+                <p className="courses-each-cate-description text-sm leading-relaxed text-gray-500 sm:text-lg"></p>
+                <div
+                  className="mx-auto mt-4 w-fit cursor-pointer rounded-lg bg-white px-5 py-3 text-sm text-purple-700 
+                        ring-1 ring-purple-700 transition-colors hover:bg-purple-700 hover:text-white sm:text-base lg:font-semibold"
+                >
+                  Chi tiết khoá học
                 </div>
               </div>
-              <div className="subCard">
-                <div className="subCardHead">
-                  <img
-                    src={require("../../../../src/assets/emoji.6d1b7051.png")}
-                    alt=""
-                  />
-                  <span className="ml-1 colorCardTitle">Elun Musk Ricard</span>
-                </div>
-                <h6>BOOTCAMP - LẬP TRÌNH FULL STACK TỪ ZERO ĐẾN CÓ VIỆC</h6>
-                <p className="colorCardTitle">
-                  Đã có hơn 6200 bạn đăng kí học và có việc làm thông qua chương
-                  trình đào tạo Bootcamp Lập trình Front End chuyên nghiệp. Khóa
-                  học 100% thực hành cường độ cao theo dự án thực tế và kết nối
-                  doanh nghiệp hỗ trợ tìm việc ngay sau khi học...
+            </div>
+            <div
+              key={""}
+              className="courses-each-cate relative mx-2 mt-4 rounded-md border-2 bg-white px-6 py-12 shadow-xl lg:mx-5 lg:mb-12 lg:rounded-3xl"
+            >
+              <div className="text-center">
+                <p className="mb-4 w-fit rounded-md bg-indigo-100 py-2 px-3 text-center text-xs text-purple-700 lg:rounded-lg">
+                  {"NodeJS"}
                 </p>
-                <div className="cardIcon">
-                  <span>
-                    <i className="far fa-clock iconOclock" />8 giờ
-                  </span>
-                  <span>
-                    <i className="far fa-calendar-alt iconCalendar" />4 tuần
-                  </span>
-                  <span>
-                    <i className="fas fa-signal iconLevel" />
-                    Tất cả
-                  </span>
-                </div>
+                <img
+                  src="https://elearningnew.cybersoft.edu.vn/hinhanh/nodejs.jpg"
+                  alt={""}
+                  className="mb-8 inline-block w-full rounded-lg object-cover object-center"
+                  style={{
+                    maxHeight: "150px",
+                    minHeight: "150px",
+                    border: "1px solid #eee",
+                  }}
+                />
+                <h2 className="courses-each-cate-heading text-lg font-bold sm:text-3xl">
+                  NodeJS
+                </h2>
 
-                <button className="btnGlobal btnSubCard">
-                  <a href="/chitiet/1312">Xem chi tiết</a>
-                </button>
-              </div>
-              <div className="cardSale">
-                <span>Yêu thích</span>
-              </div>
-            </a>
-          </div>
-          <div className="col-md-6 col-xl-3 cardGlobalRes mt-4">
-            <a className="cardGlobal moveSubCard" href="/chitiet/266656">
-              <img
-                src="https://elearningnew.cybersoft.edu.vn/hinhanh/bc32-fe.png"
-                alt=""
-              />
-              <span className="stikerCard">BC32 FE</span>
-              <div className="cardBodyGlobal">
-                <h6>Lập trình hiện đang là xu hướng trên toàn thế giới...</h6>
-                <div className="cardIcon">
-                  <span>
-                    <i className="far fa-clock iconOclock" />8 giờ
-                  </span>
-                  <span>
-                    <i className="far fa-calendar-alt iconCalendar" />4 tuần
-                  </span>
-                  <span>
-                    <i className="fas fa-signal iconLevel" />
-                    Tất cả
-                  </span>
-                </div>
-              </div>
-              <div className="cardFooter">
-                <div className="titleMaker">
-                  <div className="imgCardFooter">
-                    <img
-                      src={require("../../../../src/assets/avatar2.bb9626e2.png")}
-                      alt=""
-                    />
+                <div className="cardBodyGlobal">
+                  <h6>Lập trình hiện đang là xu hướng trên toàn thế giới...</h6>
+                  <div className="titleMaker">
+                    <div className="imgCardFooter">
+                      <img
+                        src={
+                          require("../../../../src/assets/avatar2.bb9626e2.png")
+                            .default
+                        }
+                        alt=""
+                      />
+                    </div>
+                    <span className="colorCardTitle ml-2">Elon Musk</span>
                   </div>
-                  <span className="ml-2 colorCardTitle">Elon Musk</span>
                 </div>
-                <div>
-                  <p>
-                    800.000<sup>đ</sup>
-                  </p>
-                  <p>
-                    400.000<sup>đ</sup>
-                    <i className="fas fa-tag iconTag" />
-                  </p>
-                </div>
-              </div>
-              <div className="subCard">
-                <div className="subCardHead">
-                  <img
-                    src={require("../../../../src/assets/emoji.6d1b7051.png")}
-                    alt=""
-                  />
-                  <span className="ml-1 colorCardTitle">Elun Musk Ricard</span>
-                </div>
-                <h6>BOOTCAMP - LẬP TRÌNH FULL STACK TỪ ZERO ĐẾN CÓ VIỆC</h6>
-                <p className="colorCardTitle">
-                  Đã có hơn 6200 bạn đăng kí học và có việc làm thông qua chương
-                  trình đào tạo Bootcamp Lập trình Front End chuyên nghiệp. Khóa
-                  học 100% thực hành cường độ cao theo dự án thực tế và kết nối
-                  doanh nghiệp hỗ trợ tìm việc ngay sau khi học...
-                </p>
-                <div className="cardIcon">
-                  <span>
-                    <i className="far fa-clock iconOclock" />8 giờ
-                  </span>
-                  <span>
-                    <i className="far fa-calendar-alt iconCalendar" />4 tuần
-                  </span>
-                  <span>
-                    <i className="fas fa-signal iconLevel" />
-                    Tất cả
-                  </span>
-                </div>
-
-                <button className="btnGlobal btnSubCard">
-                  <a href="/chitiet/1312">Xem chi tiết</a>
-                </button>
-              </div>
-              <div className="cardSale">
-                <span>Yêu thích</span>
-              </div>
-            </a>
-          </div>
-          <div className="col-md-6 col-xl-3 cardGlobalRes mt-4">
-            <a className="cardGlobal" href="/chitiet/281120222314310">
-              <img
-                src="https://elearningnew.cybersoft.edu.vn/hinhanh/back-end.jpg"
-                alt=""
-              />
-              <span className="stikerCard">Back end</span>
-              <div className="cardBodyGlobal">
-                <h6>Lập trình hiện đang là xu hướng trên toàn thế giới...</h6>
-                <div className="cardIcon">
-                  <span>
-                    <i className="far fa-clock iconOclock" />8 giờ
-                  </span>
-                  <span>
-                    <i className="far fa-calendar-alt iconCalendar" />4 tuần
-                  </span>
-                  <span>
-                    <i className="fas fa-signal iconLevel" />
-                    Tất cả
-                  </span>
-                </div>
-              </div>
-              <div className="cardFooter">
-                <div className="titleMaker">
-                  <div className="imgCardFooter">
-                    <img
-                      src={require("../../../../src/assets/avatar2.bb9626e2.png")}
-                      alt=""
-                    />
+                <div className="cardFooter">
+                  <div>
+                    <p>
+                      800.000<sup>đ</sup>
+                    </p>
+                    <p>
+                      400.000<sup>đ</sup>
+                    </p>
                   </div>
-                  <span className="ml-2 colorCardTitle">Elon Musk</span>
-                </div>
-                <div>
-                  <p>
-                    800.000<sup>đ</sup>
-                  </p>
-                  <p>
-                    400.000<sup>đ</sup>
-                    <i className="fas fa-tag iconTag" />
-                  </p>
-                </div>
-              </div>
-              <div className="subCard">
-                <div className="subCardHead">
-                  <img
-                    src={require("../../../../src/assets/emoji.6d1b7051.png")}
-                    alt=""
-                  />
-                  <span className="ml-1 colorCardTitle">Elun Musk Ricard</span>
-                </div>
-                <h6>BOOTCAMP - LẬP TRÌNH FULL STACK TỪ ZERO ĐẾN CÓ VIỆC</h6>
-                <p className="colorCardTitle">
-                  Đã có hơn 6200 bạn đăng kí học và có việc làm thông qua chương
-                  trình đào tạo Bootcamp Lập trình Front End chuyên nghiệp. Khóa
-                  học 100% thực hành cường độ cao theo dự án thực tế và kết nối
-                  doanh nghiệp hỗ trợ tìm việc ngay sau khi học...
-                </p>
-                <div className="cardIcon">
-                  <span>
-                    <i className="far fa-clock iconOclock" />8 giờ
-                  </span>
-                  <span>
-                    <i className="far fa-calendar-alt iconCalendar" />4 tuần
-                  </span>
-                  <span>
-                    <i className="fas fa-signal iconLevel" />
-                    Tất cả
-                  </span>
-                </div>
-
-                <button className="btnGlobal btnSubCard">
-                  <a href="/chitiet/1312">Xem chi tiết</a>
-                </button>
-              </div>
-              <div className="cardSale">
-                <span>Yêu thích</span>
-              </div>
-            </a>
-          </div>
-          <div className="col-md-6 col-xl-3 cardGlobalRes mt-4">
-            <a className="cardGlobal moveSubCard" href="/chitiet/45678981">
-              <img
-                src="https://elearningnew.cybersoft.edu.vn/hinhanh/node-js-bakery-3-co-anh.png"
-                alt=""
-              />
-              <span className="stikerCard">Lập trình web</span>
-              <div className="cardBodyGlobal">
-                <h6>Lập trình hiện đang là xu hướng trên toàn thế giới...</h6>
-                <div className="cardIcon">
-                  <span>
-                    <i className="far fa-clock iconOclock" />8 giờ
-                  </span>
-                  <span>
-                    <i className="far fa-calendar-alt iconCalendar" />4 tuần
-                  </span>
-                  <span>
-                    <i className="fas fa-signal iconLevel" />
-                    Tất cả
-                  </span>
-                </div>
-              </div>
-              <div className="cardFooter">
-                <div className="titleMaker">
-                  <div className="imgCardFooter">
-                    <img
-                      src={require("../../../../src/assets/avatar2.bb9626e2.png")}
-                      alt=""
-                    />
+                  <div>
+                    <i className="fas fa-star textStar mr-1" />
+                    <span className="textStar">4.9</span>
+                    <span className="colorCardTitle">(7840)</span>
                   </div>
-                  <span className="ml-2 colorCardTitle">Elon Musk</span>
                 </div>
-                <div>
-                  <p>
-                    800.000<sup>đ</sup>
-                  </p>
-                  <p>
-                    400.000<sup>đ</sup>
-                    <i className="fas fa-tag iconTag" />
-                  </p>
+                <p className="courses-each-cate-description text-sm leading-relaxed text-gray-500 sm:text-lg"></p>
+                <div
+                  className="mx-auto mt-4 w-fit cursor-pointer rounded-lg bg-white px-5 py-3 text-sm text-purple-700 
+                        ring-1 ring-purple-700 transition-colors hover:bg-purple-700 hover:text-white sm:text-base lg:font-semibold"
+                >
+                  Chi tiết khoá học
                 </div>
               </div>
-              <div className="subCard">
-                <div className="subCardHead">
-                  <img
-                    src={require("../../../../src/assets/emoji.6d1b7051.png")}
-                    alt=""
-                  />
-                  <span className="ml-1 colorCardTitle">Elun Musk Ricard</span>
-                </div>
-                <h6>BOOTCAMP - LẬP TRÌNH FULL STACK TỪ ZERO ĐẾN CÓ VIỆC</h6>
-                <p className="colorCardTitle">
-                  Đã có hơn 6200 bạn đăng kí học và có việc làm thông qua chương
-                  trình đào tạo Bootcamp Lập trình Front End chuyên nghiệp. Khóa
-                  học 100% thực hành cường độ cao theo dự án thực tế và kết nối
-                  doanh nghiệp hỗ trợ tìm việc ngay sau khi học...
+            </div>
+            <div
+              key={""}
+              className="courses-each-cate relative mx-2 mt-4 rounded-md border-2 bg-white px-6 py-12 shadow-xl lg:mx-5 lg:mb-12 lg:rounded-3xl"
+            >
+              <div className="text-center">
+                <p className="mb-4 w-fit rounded-md bg-indigo-100 py-2 px-3 text-center text-xs text-purple-700 lg:rounded-lg">
+                  {"Lập Trình Full Stack"}
                 </p>
-                <div className="cardIcon">
-                  <span>
-                    <i className="far fa-clock iconOclock" />8 giờ
-                  </span>
-                  <span>
-                    <i className="far fa-calendar-alt iconCalendar" />4 tuần
-                  </span>
-                  <span>
-                    <i className="fas fa-signal iconLevel" />
-                    Tất cả
-                  </span>
-                </div>
+                <img
+                  src="https://elearningnew.cybersoft.edu.vn/hinhanh/lap-trinh-full-stack.jpg"
+                  alt={""}
+                  className="mb-8 inline-block w-full rounded-lg object-cover object-center"
+                  style={{
+                    maxHeight: "150px",
+                    minHeight: "150px",
+                    border: "1px solid #eee",
+                  }}
+                />
+                <h2 className="courses-each-cate-heading text-lg font-bold sm:text-3xl">
+                  React JS
+                </h2>
 
-                <button className="btnGlobal btnSubCard">
-                  <a href="/chitiet/1312">Xem chi tiết</a>
-                </button>
+                <div className="cardBodyGlobal">
+                  <h6>Duy nhất tại CyberSoft đào tạo trọn bộ ReactJS the...</h6>
+                  <div className="titleMaker">
+                    <div className="imgCardFooter">
+                      <img
+                        src={
+                          require("../../../../src/assets/avatar2.bb9626e2.png")
+                            .default
+                        }
+                        alt=""
+                      />
+                    </div>
+                    <span className="colorCardTitle ml-2">Elon Musk</span>
+                  </div>
+                </div>
+                <div className="cardFooter">
+                  <div>
+                    <p>
+                      800.000<sup>đ</sup>
+                    </p>
+                    <p>
+                      400.000<sup>đ</sup>
+                    </p>
+                  </div>
+                  <div>
+                    <i className="fas fa-star textStar mr-1" />
+                    <span className="textStar">4.9</span>
+                    <span className="colorCardTitle">(7840)</span>
+                  </div>
+                </div>
+                <p className="courses-each-cate-description text-sm leading-relaxed text-gray-500 sm:text-lg"></p>
+                <div
+                  className="mx-auto mt-4 w-fit cursor-pointer rounded-lg bg-white px-5 py-3 text-sm text-purple-700 
+                        ring-1 ring-purple-700 transition-colors hover:bg-purple-700 hover:text-white sm:text-base lg:font-semibold"
+                >
+                  Chi tiết khoá học
+                </div>
               </div>
-              <div className="cardSale">
-                <span>Yêu thích</span>
+            </div>
+            <div
+              key={""}
+              className="courses-each-cate relative mx-2 mt-4 rounded-md border-2 bg-white px-6 py-12 shadow-xl lg:mx-5 lg:mb-12 lg:rounded-3xl"
+            >
+              <div className="text-center">
+                <p className="mb-4 w-fit rounded-md bg-indigo-100 py-2 px-3 text-center text-xs text-purple-700 lg:rounded-lg">
+                  {"Học Lập Trình JAVA Chuyên Nghiệp"}
+                </p>
+                <img
+                  src="https://elearningnew.cybersoft.edu.vn/hinhanh/hoc-lap-trinh-java-chuyen-nghiep_gp01.png"
+                  alt={""}
+                  className="mb-8 inline-block w-full rounded-lg object-cover object-center"
+                  style={{
+                    maxHeight: "150px",
+                    minHeight: "150px",
+                    border: "1px solid #eee",
+                  }}
+                />
+                <h2 className="courses-each-cate-heading text-lg font-bold sm:text-3xl">
+                  Học Lập Trình JAVA
+                </h2>
+
+                <div className="cardBodyGlobal">
+                  <h6>Lập trình hiện đang là xu hướng trên toàn thế giới...</h6>
+                  <div className="titleMaker">
+                    <div className="imgCardFooter">
+                      <img
+                        src={
+                          require("../../../../src/assets/avatar2.bb9626e2.png")
+                            .default
+                        }
+                        alt=""
+                      />
+                    </div>
+                    <span className="colorCardTitle ml-2">Elon Musk</span>
+                  </div>
+                </div>
+                <div className="cardFooter">
+                  <div>
+                    <p>
+                      800.000<sup>đ</sup>
+                    </p>
+                    <p>
+                      400.000<sup>đ</sup>
+                    </p>
+                  </div>
+                  <div>
+                    <i className="fas fa-star textStar mr-1" />
+                    <span className="textStar">4.9</span>
+                    <span className="colorCardTitle">(7840)</span>
+                  </div>
+                </div>
+                <p className="courses-each-cate-description text-sm leading-relaxed text-gray-500 sm:text-lg"></p>
+                <div
+                  className="mx-auto mt-4 w-fit cursor-pointer rounded-lg bg-white px-5 py-3 text-sm text-purple-700 
+                        ring-1 ring-purple-700 transition-colors hover:bg-purple-700 hover:text-white sm:text-base lg:font-semibold"
+                >
+                  Chi tiết khoá học
+                </div>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </div>

@@ -13,7 +13,10 @@ const SlideHome = () => {
           <div>
             <img
               className="sliderPlaneImg"
-              src={require("../../../../src/assets/paper_plane.93dfdbf5.png")}
+              src={
+                require("../../../../src/assets/paper_plane.93dfdbf5.png")
+                  .default
+              }
               alt=""
             />
           </div>
@@ -31,32 +34,46 @@ const SlideHome = () => {
           <div>
             <img
               className="sliderMainImg"
-              src={require("../../../../src/assets/slider2.f170197b.png")}
+              src={
+                require("../../../../src/assets/slider2.f170197b.png").default
+              }
               alt=""
             />
             <img
               className="sliderSubImg sliderCodeImg"
-              src={require("../../../../src/assets/code_slider.8c12bbb4.png")}
+              src={
+                require("../../../../src/assets/code_slider.8c12bbb4.png")
+                  .default
+              }
               alt=""
             />
             <img
               className="sliderSubImg sliderMesImg "
-              src={require("../../../../src/assets/message_slider.6835c478.png")}
+              src={
+                require("../../../../src/assets/message_slider.6835c478.png")
+                  .default
+              }
               alt=""
             />
             <img
               className="sliderSubImg sliderCloudImg"
-              src={require("../../../../src/assets/clouds.15eb556c.png")}
+              src={
+                require("../../../../src/assets/clouds.15eb556c.png").default
+              }
               alt=""
             />
             <img
               className="sliderSubImg sliderCloud2Img"
-              src={require("../../../../src/assets/clouds.15eb556c.png")}
+              src={
+                require("../../../../src/assets/clouds.15eb556c.png").default
+              }
               alt=""
             />
             <img
               className="sliderSubImg sliderCloud3Img"
-              src={require("../../../../src/assets/clouds.15eb556c.png")}
+              src={
+                require("../../../../src/assets/clouds.15eb556c.png").default
+              }
               alt=""
             />
           </div>
