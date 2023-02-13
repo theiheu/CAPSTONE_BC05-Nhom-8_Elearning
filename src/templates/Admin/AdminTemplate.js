@@ -80,7 +80,7 @@ export default function AdminTemplate(props) {
             <div className="h-screen flex overflow-hidden bg-gray-100">
               <div className="hidden md:flex md:flex-shrink-0">
                 <div className="flex flex-col w-64">
-                  <div className="flex flex-col h-0 flex-1">
+                  <div className="flex flex-col h-0 flex-1 shadow-lg bg-white">
                     <div className="flex items-center h-16 flex-shrink-0 px-4 bg-gray-900">
                       <img
                         className="h-8 w-auto cursor-pointer"
