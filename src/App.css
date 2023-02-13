@@ -23,7 +23,7 @@ body > iframe[style*="2147483647"] {
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 body {

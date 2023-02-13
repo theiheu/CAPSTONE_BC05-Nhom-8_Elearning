@@ -1,10 +1,9 @@
 import React, { useEffect, useState, Fragment } from "react";
 import { Route } from "react-router";
-import Navbar from "../Home/Layouts/navbar";
-import Footer from "../Home/Layouts/footer";
+import Footer from "../Home/Layouts/Footer";
 import SubMenuDropdown from "../Home/Components/Home/subMenuDropdown";
-import LogoModal from "../../components/Loading/LogoModal/LogoModal";
 import "./../Home/Pages/Style/StylePages.css";
+import Header from "../Home/Layouts/Header";
 
 export default function UserTemplate(props) {
   const { Component, ...restProps } = props;
@@ -35,12 +34,12 @@ export default function UserTemplate(props) {
         //props.location, props.history, props.match
         return (
           <Fragment>
-            <Navbar toggle={toggle} {...propsRoute} />
+            <Header toggle={toggle} {...propsRoute} />
             <SubMenuDropdown isOpen={isOpen} toggle={toggle} />
 
             <Fragment>
               <div className="user-page mb-8">
-                <div className="grid grid-flow-col grid-cols-12 justify-center gap-x-8 px-5 pt-5 relative">
+                <div className="relative grid grid-flow-col grid-cols-12 justify-center gap-x-8 px-5 pt-5">
                   <div className="col-span-6">
                     <Component {...propsRoute} />
                   </div>

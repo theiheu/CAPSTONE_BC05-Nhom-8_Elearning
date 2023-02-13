@@ -43,7 +43,7 @@
 //                 <span>{course.moTa}</span>
 //               )}
 //             </p>
-//             <button className="w-fit mt-4 border-2 border-purple-700 text-purple-700 bg-white hover:text-white hover:bg-purple-700 font-semibold text-base px-5 py-3 rounded-lg transition-colors">
+//             <button className="w-fit mt-4 border-2 border-purple-700 text-purple-700 bg-white  hover:bg-purple-700 font-semibold text-base px-5 py-3 rounded-lg transition-colors">
 //               Class Details
 //             </button>
 //           </div>

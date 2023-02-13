@@ -1,10 +1,6 @@
 import React, { Fragment } from "react";
 import "./../Style/homeStyle.css";
-import Lazyload from "react-lazyload";
 import HomePage from "../../../components/HomePage/HomePage";
-import TabCoursesHome from "../Components/Home/tabCoursesHome";
-import { history } from "../../../App";
-import { Link, NavLink } from "react-router-dom";
 
 export default function HomeContent(props) {
   return (
@@ -77,7 +73,7 @@ export default function HomeContent(props) {
             </p>
             <NavLink
               to="./signup"
-              className="mt-5 rounded-lg bg-purple-600 p-4  text-sm font-semibold text-white transition-colors hover:bg-purple-400 hover:text-white sm:p-5 sm:text-base"
+              className="mt-5 rounded-lg bg-purple-600 p-4  text-sm font-semibold text-white transition-colors hover:bg-purple-400  sm:p-5 sm:text-base"
             >
               Đăng ký ngay
             </NavLink>
@@ -117,7 +113,7 @@ export default function HomeContent(props) {
             <Link
               to="./contact"
               className="mx-auto mt-5 flex w-fit rounded-lg bg-purple-600 p-4 text-sm 
-              font-semibold text-white transition-colors hover:bg-purple-700 hover:text-white sm:mx-0 sm:p-5 sm:text-base"
+              font-semibold text-white transition-colors hover:bg-purple-700  sm:mx-0 sm:p-5 sm:text-base"
             >
               Liên hệ với chúng tôi
             </Link>

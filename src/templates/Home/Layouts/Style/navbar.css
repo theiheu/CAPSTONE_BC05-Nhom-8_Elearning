@@ -20,7 +20,7 @@
 }
 
 #user-menu-dropdown {
-  width: 200px;
+  width: 250px;
 }
 
 .nav-links:hover,
@@ -28,7 +28,10 @@
 .signup-btn-mobile,
 .active {
   /* background-color: var(--maincolor) !important; */
-  color: white !important;
+  color: black !important;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .dropdown-nav {
@@ -61,7 +64,7 @@
 }
 
 .mobile-menu {
-  @apply fixed z-10 top-[96px] right-0 w-full grid grid-flow-row auto-rows-max gap-6 pb-8 text-center place-content-center bg-white shadow-xl transition duration-300 ease-in-out text-white;
+  @apply fixed top-[96px] right-0 z-10 grid w-full grid-flow-row auto-rows-max place-content-center gap-6 bg-white pb-8 text-center text-white shadow-xl transition duration-300 ease-in-out;
   transform-origin: top center;
   animation: rotateX 300ms ease-in-out forwards;
 }

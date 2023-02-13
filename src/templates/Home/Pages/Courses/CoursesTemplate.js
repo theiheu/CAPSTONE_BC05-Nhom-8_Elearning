@@ -1,10 +1,10 @@
 import { Fragment, useEffect, useState } from "react";
 import { Route } from "react-router";
-import Footer from "../../Layouts/footer";
+import Footer from "../../Layouts/Footer";
 import SubMenuDropdown from "../../Components/Home/subMenuDropdown";
-import Navbar from "../../Layouts/navbar";
+import Navbar from "../../Layouts/Header";
 
-export default function CoursesTemplate (props){
+export default function CoursesTemplate(props) {
   const { Component, ...restProps } = props;
 
   const [isOpen, setIsOpen] = useState(false);
@@ -36,10 +36,10 @@ export default function CoursesTemplate (props){
             <Navbar toggle={toggle} {...propsRoute} />
             <SubMenuDropdown isOpen={isOpen} toggle={toggle} />
             <Component {...propsRoute} />
-            <Footer  {...propsRoute} />
+            <Footer {...propsRoute} />
           </Fragment>
         );
       }}
     />
   );
-};
+}

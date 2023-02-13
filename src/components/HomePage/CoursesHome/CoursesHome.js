@@ -67,7 +67,7 @@ const CoursesHome = () => {
                 <p className="courses-each-cate-description text-sm leading-relaxed text-gray-500 sm:text-lg"></p>
                 <div
                   className="mx-auto mt-4 w-fit cursor-pointer rounded-lg bg-white px-5 py-3 text-sm text-purple-700 
-                        ring-1 ring-purple-700 transition-colors hover:bg-purple-700 hover:text-white sm:text-base lg:font-semibold"
+                        ring-1 ring-purple-700 transition-colors hover:bg-purple-700  sm:text-base lg:font-semibold"
                 >
                   Chi tiết khoá học
                 </div>
@@ -128,7 +128,7 @@ const CoursesHome = () => {
                 <p className="courses-each-cate-description text-sm leading-relaxed text-gray-500 sm:text-lg"></p>
                 <div
                   className="mx-auto mt-4 w-fit cursor-pointer rounded-lg bg-white px-5 py-3 text-sm text-purple-700 
-                        ring-1 ring-purple-700 transition-colors hover:bg-purple-700 hover:text-white sm:text-base lg:font-semibold"
+                        ring-1 ring-purple-700 transition-colors hover:bg-purple-700  sm:text-base lg:font-semibold"
                 >
                   Chi tiết khoá học
                 </div>
@@ -189,7 +189,7 @@ const CoursesHome = () => {
                 <p className="courses-each-cate-description text-sm leading-relaxed text-gray-500 sm:text-lg"></p>
                 <div
                   className="mx-auto mt-4 w-fit cursor-pointer rounded-lg bg-white px-5 py-3 text-sm text-purple-700 
-                        ring-1 ring-purple-700 transition-colors hover:bg-purple-700 hover:text-white sm:text-base lg:font-semibold"
+                        ring-1 ring-purple-700 transition-colors hover:bg-purple-700  sm:text-base lg:font-semibold"
                 >
                   Chi tiết khoá học
                 </div>
@@ -250,7 +250,7 @@ const CoursesHome = () => {
                 <p className="courses-each-cate-description text-sm leading-relaxed text-gray-500 sm:text-lg"></p>
                 <div
                   className="mx-auto mt-4 w-fit cursor-pointer rounded-lg bg-white px-5 py-3 text-sm text-purple-700 
-                        ring-1 ring-purple-700 transition-colors hover:bg-purple-700 hover:text-white sm:text-base lg:font-semibold"
+                        ring-1 ring-purple-700 transition-colors hover:bg-purple-700  sm:text-base lg:font-semibold"
                 >
                   Chi tiết khoá học
                 </div>

@@ -15,31 +15,11 @@ import AddNewCourses from "./templates/Admin/Pages/Courses/addNewCourses";
 import EditCourse from "./templates/Admin/Pages/Courses/editCourse";
 import CoursesTemplate from "./templates/Home/Pages/Courses/CoursesTemplate";
 import addNewUser from "./templates/Admin/Pages/Users/addNewUser";
-
-// import { Course } from "./components/Course/Course";
-// import { NotFoundPage } from "./components/layout/NotFoundPage/NotFoundPage";
-// import { Event } from "./components/EventPage/Event";
-// import { Category } from "./components/CategoryPage/Category";
-// import { About } from "./components/About/About";
-// import { DetailCourse } from "./components/DetailCourse/DetailCourse";
-// import { Login } from "./components/Login/Login";
-// import { ProfilePersonal } from "./components/ProfilePersonal/ProfilePersonal";
-
 export const history = createBrowserHistory();
 
 function App() {
   return (
     <Fragment>
-      {/* <Routes>
-        <Route path="/chitiet/:idCourse" element={<DetailCourse />} />
-        <Route path="/khoahoc" element={<Course />} />
-        <Route path="/danhmuckhoahoc/:maDanhMuc" element={<Category />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/*" element={<NotFoundPage />} />
-      </Routes> */}
-      {/* <Routes>
-        <Route path="/profile" element={<ProfilePersonal />} />
-      </Routes> */}
       <Router history={history}>
         <Suspense fallback={<Loading />}>
           <ScrollToTop />

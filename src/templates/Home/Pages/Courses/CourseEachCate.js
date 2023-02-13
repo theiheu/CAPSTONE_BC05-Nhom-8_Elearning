@@ -26,24 +26,24 @@ export default function CourseEachCate(props) {
 
   const renderCourses = () => {
     return (
-      <div className="text-gray-600 body-font flex flex-col items-center">
-        <div className="container mb-8 lg:mb-12 sm:mb-0 py-8 sm:py-16 px-3 mx-auto">
-          <div className="grid grid-cols-2 lg:grid-cols-4 lg:-m-4">
+      <div className="body-font flex flex-col items-center text-gray-600">
+        <div className="container mx-auto mb-8 py-8 px-3 sm:mb-0 sm:py-16 lg:mb-12">
+          <div className="grid grid-cols-2 lg:-m-4 lg:grid-cols-4">
             {arrCourseEachCate?.slice(0, loadMore).map((course, index) => {
               return (
                 <div
                   key={index}
-                  className="courses-each-cate relative lg:mb-12 mx-2 lg:mx-5 px-6 py-12 bg-white rounded-md lg:rounded-3xl shadow-xl"
+                  className="courses-each-cate relative mx-2 rounded-md bg-white px-6 py-12 shadow-xl lg:mx-5 lg:mb-12 lg:rounded-3xl"
                 >
                   <div className="absolute top-0 left-0"></div>
-                  <p className="rounded-md lg:rounded-lg mb-4 text-center text-purple-700 bg-indigo-100 py-2 px-3 w-fit text-xs">
+                  <p className="mb-4 w-fit rounded-md bg-indigo-100 py-2 px-3 text-center text-xs text-purple-700 lg:rounded-lg">
                     {course?.danhMucKhoaHoc?.tenDanhMucKhoaHoc}
                   </p>
                   <div className="text-center">
                     <LazyLoad height={200}>
                       <img
                         alt={course?.tenKhoaHoc}
-                        className="w-full mb-8 object-cover object-center rounded-lg inline-block"
+                        className="mb-8 inline-block w-full rounded-lg object-cover object-center"
                         style={{
                           maxHeight: "150px",
                           minHeight: "150px",
@@ -52,10 +52,10 @@ export default function CourseEachCate(props) {
                         src={course?.hinhAnh}
                       />
                     </LazyLoad>
-                    <h2 className="courses-each-cate-heading text-lg sm:text-3xl font-bold">
+                    <h2 className="courses-each-cate-heading text-lg font-bold sm:text-3xl">
                       {course?.tenKhoaHoc}
                     </h2>
-                    <p className="courses-each-cate-description text-sm sm:text-lg text-gray-500 leading-relaxed">
+                    <p className="courses-each-cate-description text-sm leading-relaxed text-gray-500 sm:text-lg">
                       {course?.moTa?.length > 100 ? (
                         <span>{course?.moTa?.slice(0, 90)}...</span>
                       ) : (
@@ -66,8 +66,8 @@ export default function CourseEachCate(props) {
                       onClick={() => {
                         history.push(`/courses/detail/${course.maKhoaHoc}`);
                       }}
-                      className="mx-auto cursor-pointer w-fit mt-4 ring-1 ring-purple-700 text-purple-700 bg-white hover:text-white hover:bg-purple-700 
-                        lg:font-semibold text-sm sm:text-base px-5 py-3 rounded-lg transition-colors"
+                      className="mx-auto mt-4 w-fit cursor-pointer rounded-lg bg-white px-5 py-3  text-sm 
+                        text-purple-700 ring-1 ring-purple-700 transition-colors hover:bg-purple-700 sm:text-base lg:font-semibold"
                     >
                       Chi tiết khoá học
                     </div>
@@ -82,9 +82,9 @@ export default function CourseEachCate(props) {
             onClick={() => {
               handleLoadMore();
             }}
-            className="mb-14 lg:mb-32 w-fit bg-purple-600 hover:bg-purple-700 text-white font-semibold text-sm sm:text-base p-5 rounded-lg transition-colors"
+            className="mb-14 w-fit rounded-lg bg-purple-600 p-5 text-sm font-semibold text-white transition-colors hover:bg-purple-700 sm:text-base lg:mb-32"
           >
-            Xem thêm 
+            Xem thêm
           </button>
         </div>
       </div>
@@ -95,10 +95,10 @@ export default function CourseEachCate(props) {
     <Fragment>
       <div className="courses--header w-full">
         <div className="container px-5 py-8 lg:py-32">
-          <p className="hidden lg:block  mb-5">
+          <p className="mb-5 hidden  lg:block">
             <BreadCrumb />
           </p>
-          <h1 className="text-2xl lg:text-4xl uppercase w-36 lg:w-full">
+          <h1 className="w-36 text-2xl uppercase lg:w-full lg:text-4xl">
             {arrCourseEachCate[0]?.danhMucKhoaHoc?.tenDanhMucKhoaHoc}
           </h1>
         </div>

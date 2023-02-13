@@ -4,13 +4,12 @@ import { NavLink, Link } from "react-router-dom";
 import "./Style/navbar.css";
 import { getCateCoursesAction } from "../../../redux/actions/coursesActions";
 import SignInModal from "../Pages/SignInModal/SignInModal";
-import { Select } from "antd";
 import { useTranslation } from "react-i18next";
 import _ from "lodash";
 import { history } from "../../../App";
 import { TOKEN, USER_SIGNIN } from "../../../utilities/Settings/config";
 
-export default function Navbar({ toggle }) {
+export default function Header({ toggle }) {
   const HeaderFixed = () => {
     window.onscroll = function () {
       const header = document.querySelector(".header");
@@ -45,7 +44,7 @@ export default function Navbar({ toggle }) {
         <div className="ml-auto flex">
           <button
             className="lg:text-md mr-2 w-max rounded-md p-3 text-xs text-main-500 ring-1 
-            ring-main-500 transition-colors duration-150 hover:bg-main-500 hover:text-white sm:px-4 sm:py-2 xl:text-lg"
+            ring-main-500 transition-colors duration-150 hover:bg-main-500  sm:px-4 sm:py-2 xl:text-lg"
             onClick={() => {
               setShowModal(!showModal);
             }}
@@ -57,7 +56,7 @@ export default function Navbar({ toggle }) {
           )}
           <Link
             activeClassName="active"
-            className="lg:text-md w-max rounded-md bg-main-500 p-3 text-center text-xs font-normal text-white hover:text-white hover:shadow-xl sm:px-4 sm:py-2 xl:text-lg"
+            className="lg:text-md w-max rounded-md bg-main-500 p-3 text-center text-xs font-normal text-white  hover:shadow-xl sm:px-4 sm:py-2 xl:text-lg"
             to="/signup"
           >
             {t("Đăng ký")}
@@ -73,30 +72,30 @@ export default function Navbar({ toggle }) {
           <button
             id="user-menu"
             className=" lg:text-md relative w-max place-self-stretch rounded-md px-4 py-2 
-            text-main-500 ring-1 ring-main-500 transition-colors duration-150 hover:bg-main-500 hover:text-white xl:text-lg"
+            text-main-500 ring-1 ring-main-500 transition-colors duration-150 hover:bg-main-500  xl:text-lg"
           >
             {userSignIn?.taiKhoan}
           </button>
 
           <ul
             id="user-menu-dropdown"
-            className=" lg:text-md absolute z-10 min-w-[200px] origin-top-right scale-0 transform rounded-lg border bg-white transition 
+            className=" lg:text-md absolute z-10 min-w-[250px] origin-top-right scale-0 transform rounded-lg border bg-white transition 
             duration-150 ease-in-out focus:scale-100 sm:group-hover:scale-100 xl:text-lg"
             style={{ right: 0, top: 55, padding: 10 }}
           >
             <li>
               <button
-                className="block w-full rounded-md py-2 px-4 text-left text-black transition duration-200 hover:bg-main-500 hover:text-white"
+                className="block w-full rounded-md py-2 px-4 text-left text-black transition duration-200 hover:bg-main-500 "
                 onClick={() => {
                   history.push("/about");
                 }}
               >
-                Profile
+                Thông tin cá nhân
               </button>
             </li>
             <li>
               <button
-                className="block w-full rounded-md py-2 px-4 text-left text-black transition duration-200 hover:bg-main-500 hover:text-white"
+                className="block w-full rounded-md py-2 px-4 text-left text-black transition duration-200 hover:bg-main-500 "
                 onClick={() => {
                   localStorage.removeItem(USER_SIGNIN);
                   localStorage.removeItem(TOKEN);
@@ -111,7 +110,7 @@ export default function Navbar({ toggle }) {
             ) : (
               <li>
                 <button
-                  className="block w-full rounded-md py-2 px-4 text-left text-black transition duration-200 hover:bg-main-500 hover:text-white"
+                  className="block w-full rounded-md py-2 px-4 text-left text-black transition duration-200 hover:bg-main-500 "
                   onClick={() => {
                     history.push("/admin");
                   }}
@@ -232,32 +231,32 @@ export default function Navbar({ toggle }) {
         <ul className="menuHeader">
           <li className="courseCate">
             <i className="fas fa-bars mr-1" />
-            <a href="/trangchu" aria-current="page" className="active">
+            <span aria-current="page" className="active text-black">
               Danh mục
-            </a>
+            </span>
             <ul className="courseCateList">
               <li>
-                <a href="/danhmuckhoahoc/BackEnd">Lập trình Backend</a>
+                <a href="/courses/BackEnd">Lập trình Backend</a>
               </li>
               <li>
-                <a href="/danhmuckhoahoc/Design">Thiết kế Web</a>
+                <a href="/courses/Design">Thiết kế Web</a>
               </li>
               <li>
-                <a href="/danhmuckhoahoc/DiDong">Lập trình di động</a>
+                <a href="/courses/DiDong">Lập trình di động</a>
               </li>
               <li>
-                <a href="/danhmuckhoahoc/FrontEnd">Lập trình Front end</a>
+                <a href="/courses/FrontEnd">Lập trình Front end</a>
               </li>
               <li>
-                <a href="/danhmuckhoahoc/FullStack">Lập trình Full Stack</a>
+                <a href="/courses/FullStack">Lập trình Full Stack</a>
               </li>
               <li>
-                <a href="/danhmuckhoahoc/TuDuy">Tư duy lập trình</a>
+                <a href="/courses/TuDuy">Tư duy lập trình</a>
               </li>
             </ul>
           </li>
           <li>
-            <a href="/khoahoc">Khóa học</a>
+            <a href="/courses">Khóa học</a>
           </li>
           <li>
             <a href="/blog">Blog</a>
