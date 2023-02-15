@@ -48,7 +48,9 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "react-scripts build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -72,6 +74,7 @@
     "@types/jquery": "^3.5.16",
     "autoprefixer": "^9",
     "babel-plugin-react-html-attrs": "^3.0.5",
+    "gh-pages": "^5.0.0",
     "postcss": "^7",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
@@ -80,5 +83,8 @@
   },
   "overrides": {
     "react-error-overlay": "$react-error-overlay"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
