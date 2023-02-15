@@ -6,7 +6,7 @@ export default function SubMenuDropdown({ isOpen, toggle }) {
   return (
     <div className="relative">
       <div
-        className={isOpen ? "mobile-menu" : "hidden mobile-menu-hide"}
+        className={isOpen ? "mobile-menu" : "mobile-menu-hide hidden"}
         onClick={toggle}
       >
         <Link to="/">{"Home"}</Link>

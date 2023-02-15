@@ -1,5 +1,6 @@
 import React from "react";
+import { ProfilePersonal } from "../../../../components/ProfilePersonal/ProfilePersonal";
 
 export default function Profile() {
-  return <h2>hello</h2>;
+  return <ProfilePersonal />;
 }

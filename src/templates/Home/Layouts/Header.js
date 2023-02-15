@@ -87,7 +87,7 @@ export default function Header({ toggle }) {
               <button
                 className="block w-full rounded-md py-2 px-4 text-left text-black transition duration-200 hover:bg-main-500 "
                 onClick={() => {
-                  history.push("/about");
+                  history.push("/profile");
                 }}
               >
                 Thông tin cá nhân
