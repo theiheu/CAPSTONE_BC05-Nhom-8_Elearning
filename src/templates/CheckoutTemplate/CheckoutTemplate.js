@@ -15,19 +15,6 @@ export default function CheckoutTemplate(props) {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
-    const hideMenu = () => {
-      if (window.innerWidth > 768 && isOpen) {
-        setIsOpen(false);
-      }
-    };
-    window.addEventListener("resize", hideMenu);
-
-    return () => {
-      window.removeEventListener("resize", hideMenu);
-    };
-  });
-
   if (!localStorage.getItem(USER_SIGNIN)) {
     return <Redirect to="/signin" />;
   }

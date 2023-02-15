@@ -71,8 +71,8 @@ export default function Header({ toggle }) {
         >
           <button
             id="user-menu"
-            className=" lg:text-md relative w-max place-self-stretch rounded-md px-4 py-2 
-            text-main-500 ring-1 ring-main-500 transition-colors duration-150 hover:bg-main-500  xl:text-lg"
+            className=" lg:text-md hover:white relative w-max place-self-stretch rounded-md px-4 
+            py-2 text-main-500 ring-1 ring-main-500 transition-colors duration-150 hover:bg-main-500 xl:text-lg"
           >
             {userSignIn?.taiKhoan}
           </button>
@@ -112,10 +112,10 @@ export default function Header({ toggle }) {
                 <button
                   className="block w-full rounded-md py-2 px-4 text-left text-black transition duration-200 hover:bg-main-500 "
                   onClick={() => {
-                    history.push("/admin");
+                    history.push("/admin/courses");
                   }}
                 >
-                  Admin
+                  Quản lý
                 </button>
               </li>
             )}

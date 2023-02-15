@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { history } from "../../../App";
 
 const CoursesHome = () => {
   return (
@@ -18,10 +19,10 @@ const CoursesHome = () => {
             >
               <div className="text-center">
                 <p className="mb-4 w-fit rounded-md bg-indigo-100 py-2 px-3 text-center text-xs text-purple-700 lg:rounded-lg">
-                  {"TailwindCss"}
+                  {"Vue JS"}
                 </p>
                 <img
-                  src="https://elearningnew.cybersoft.edu.vn/hinhanh/tailwind-css_gp01.jpg"
+                  src="https://elearningnew.cybersoft.edu.vn/hinhanh/lap-trinh-vue-js-co-ban-den-nang-cao_gp01.jpg"
                   alt={""}
                   className="mb-8 inline-block w-full rounded-lg object-cover object-center"
                   style={{
@@ -31,11 +32,14 @@ const CoursesHome = () => {
                   }}
                 />
                 <h2 className="courses-each-cate-heading text-lg font-bold sm:text-3xl">
-                  TailwindCss
+                  Lập Trình Vue JS
                 </h2>
 
                 <div className="cardBodyGlobal">
-                  <h6>tailwind là một thư viện hỗ trợ cực kỳ phổ biến và...</h6>
+                  <h6>
+                    Vue.js là một framework dùng để xây dựng giao diện người
+                    dùng. ...
+                  </h6>
                   <div className="titleMaker">
                     <div className="imgCardFooter">
                       <img
@@ -66,6 +70,9 @@ const CoursesHome = () => {
                 </div>
                 <p className="courses-each-cate-description text-sm leading-relaxed text-gray-500 sm:text-lg"></p>
                 <div
+                  onClick={() => {
+                    history.push(`/courses/detail/VUEJSBC37`);
+                  }}
                   className="mx-auto mt-4 w-fit cursor-pointer rounded-lg bg-white px-5 py-3 text-sm text-purple-700 
                         ring-1 ring-purple-700 transition-colors hover:bg-purple-700  sm:text-base lg:font-semibold"
                 >
@@ -127,6 +134,9 @@ const CoursesHome = () => {
                 </div>
                 <p className="courses-each-cate-description text-sm leading-relaxed text-gray-500 sm:text-lg"></p>
                 <div
+                  onClick={() => {
+                    history.push(`/courses/detail/ITEC2112`);
+                  }}
                   className="mx-auto mt-4 w-fit cursor-pointer rounded-lg bg-white px-5 py-3 text-sm text-purple-700 
                         ring-1 ring-purple-700 transition-colors hover:bg-purple-700  sm:text-base lg:font-semibold"
                 >
@@ -188,6 +198,9 @@ const CoursesHome = () => {
                 </div>
                 <p className="courses-each-cate-description text-sm leading-relaxed text-gray-500 sm:text-lg"></p>
                 <div
+                  onClick={() => {
+                    history.push(`/courses/detail/React991028`);
+                  }}
                   className="mx-auto mt-4 w-fit cursor-pointer rounded-lg bg-white px-5 py-3 text-sm text-purple-700 
                         ring-1 ring-purple-700 transition-colors hover:bg-purple-700  sm:text-base lg:font-semibold"
                 >
@@ -249,6 +262,9 @@ const CoursesHome = () => {
                 </div>
                 <p className="courses-each-cate-description text-sm leading-relaxed text-gray-500 sm:text-lg"></p>
                 <div
+                  onClick={() => {
+                    history.push(`/courses/detail/ITEC2115`);
+                  }}
                   className="mx-auto mt-4 w-fit cursor-pointer rounded-lg bg-white px-5 py-3 text-sm text-purple-700 
                         ring-1 ring-purple-700 transition-colors hover:bg-purple-700  sm:text-base lg:font-semibold"
                 >

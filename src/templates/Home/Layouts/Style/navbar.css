@@ -23,6 +23,10 @@
   width: 250px;
 }
 
+#user-menu:hover {
+  color: white !important;
+}
+
 .nav-links:hover,
 .sub-link-menu:hover,
 .signup-btn-mobile,

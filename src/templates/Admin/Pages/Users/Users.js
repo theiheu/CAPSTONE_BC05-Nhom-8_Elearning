@@ -105,9 +105,10 @@ export default function User() {
             >
               <EditOutlined style={{ color: "blue" }} />{" "}
             </span>
+
             <span
               key={2}
-              className="tooltip bg-white cursor-pointer"
+              className="tooltip cursor-pointer bg-white"
               onClick={() => {
                 if (
                   window.confirm("Chắc chắn xóa user " + user.taiKhoan + " ?")
@@ -116,7 +117,7 @@ export default function User() {
                 }
               }}
             >
-              <TrashIcon className=" h-7 w-7 text-red-600 hover:scale-125 transition duration-150 origin-center bg-white" />
+              <TrashIcon className=" h-7 w-7 origin-center bg-white text-red-600 transition duration-150 hover:scale-125" />
               <span className="tooltiptext">Xoá</span>
             </span>
           </Fragment>
@@ -139,7 +140,7 @@ export default function User() {
   return (
     <Fragment>
       <div className="py-12">
-        <div className="max-w-7xl flex flex-row items-center justify-between mx-auto px-4 xl:px-0 sm:px-6 md:px-8">
+        <div className="mx-auto flex max-w-7xl flex-row items-center justify-between px-4 sm:px-6 md:px-8 xl:px-0">
           <div>
             <h3 className="text-4xl">Quản lý người dùng</h3>
             <Button
@@ -163,7 +164,7 @@ export default function User() {
             />
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 xl:px-0 sm:px-6 md:px-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 xl:px-0">
           <div className="py-4">
             <Table
               columns={columns}

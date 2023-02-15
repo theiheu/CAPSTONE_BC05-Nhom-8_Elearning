@@ -10,7 +10,7 @@ const BoxNumberContainer = () => {
       onEnter={() => setCounterOn(true)}
       onExit={() => setCounterOn(false)}
     >
-      <div className="boxNumberContainer mt-5">
+      <div className="boxNumberContainer mt-5 rounded-xl">
         <div className="row">
           <div className="col-lg-3 col-md-6 flex justify-center p-4">
             <div className="boxNumber">

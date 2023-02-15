@@ -11,7 +11,7 @@ import {
 import "./Style/StyleCourses.css";
 import "./../Components/Home/styles/tabCoursesHome.css";
 
-export default function Courses(props) {
+export default function Courses() {
   const { arrCateCourse } = useSelector(
     (state) => state.CategoryCoursesReducer
   );

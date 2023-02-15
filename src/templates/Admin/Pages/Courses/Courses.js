@@ -13,14 +13,12 @@ import { history } from "../../../../App";
 
 // export default function Courses({ tenKhoaHoc }) {
 export default function Courses() {
-
   const { arrCoursesAdmin } = useSelector((state) => state.CoursesAdminReducer);
   // const { arrCoursesAdminDefault } = useSelector((state) => state.CoursesAdminReducer);
 
   const dispatch = useDispatch();
-  console.log('arrCoursesAdmin', arrCoursesAdmin)
+  console.log("arrCoursesAdmin", arrCoursesAdmin);
   const { Search } = Input;
-
 
   useEffect(() => {
     dispatch(getCoursesAdminAction());
@@ -128,12 +126,12 @@ export default function Courses() {
               to={`/admin/courses/edit/${courses.maKhoaHoc}`}
               className="tooltip bg-white"
             >
-              <PencilAltIcon className="mr-3 h-7 w-7 text-blue-500 hover:scale-125 transition duration-150 origin-center bg-white" />
-              <span className="tooltiptext">Sửa</span>
+              <PencilAltIcon className="mr-3 h-7 w-7 origin-center bg-white text-blue-500 transition duration-150 hover:scale-125" />
+              <span className="tooltiptext text-black">Sửa</span>
             </Link>
             <span
               key={2}
-              className="tooltip bg-white cursor-pointer"
+              className="tooltip cursor-pointer bg-white"
               onClick={() => {
                 if (
                   window.confirm(
@@ -144,7 +142,7 @@ export default function Courses() {
                 }
               }}
             >
-              <TrashIcon className=" h-7 w-7 text-red-600 hover:scale-125 transition duration-150 origin-center bg-white" />
+              <TrashIcon className=" h-7 w-7 origin-center bg-white text-red-600 transition duration-150 hover:scale-125" />
               <span className="tooltiptext">Xoá</span>
             </span>
           </Fragment>
@@ -159,24 +157,26 @@ export default function Courses() {
   };
 
   const onSearch = (value) => {
-    console.log('search', value)
+    console.log("search", value);
     dispatch(getCoursesAdminAction(value));
   };
 
   return (
     <Fragment>
       <div className="py-12">
-        <div className="max-w-7xl flex flex-row items-center justify-between mx-auto px-4 xl:px-0 sm:px-6 md:px-8">
+        <div className="mx-auto flex max-w-7xl flex-row items-center justify-between px-4 sm:px-6 md:px-8 xl:px-0">
           <div>
             <h3 className="text-4xl">Quản lý khoá học</h3>
-          <Button
-            type='primary' style={{ width: 150 }} className='mb-4'
-            onClick={() => {
-              history.push("/admin/courses/add-new");
-            }}
-          >
-            Thêm khoá học
-          </Button>
+            <Button
+              type="primary"
+              style={{ width: 150 }}
+              className="mb-4"
+              onClick={() => {
+                history.push("/admin/courses/add-new");
+              }}
+            >
+              Thêm khoá học
+            </Button>
           </div>
           <div className="inline-flex  items-center">
             <Search
@@ -187,18 +187,17 @@ export default function Courses() {
             />
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 xl:px-0 sm:px-6 md:px-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 xl:px-0">
           <div className="py-4">
             <Table
               columns={columns}
               dataSource={arrCoursesAdmin}
-              enterButton={<SearchIcon/>}
+              enterButton={<SearchIcon />}
               onChange={onChange}
               rowKey={"maKhoaHoc"}
             />
           </div>
         </div>
-      
       </div>
     </Fragment>
   );
