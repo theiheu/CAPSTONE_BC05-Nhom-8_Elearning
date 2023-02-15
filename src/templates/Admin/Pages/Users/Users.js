@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import "./../../style/StyleAdmin.css";
-import { SearchIcon, TrashIcon } from "@heroicons/react/outline";
+import { SearchIcon } from "@heroicons/react/outline";
 import { Button, Input, Table } from "antd";
-import { EditOutlined } from "@ant-design/icons";
+import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import AddNewUsers from "./addNewUser";
@@ -108,7 +108,7 @@ export default function User() {
 
             <span
               key={2}
-              className="tooltip cursor-pointer bg-white"
+              className=" ml-3 cursor-pointer bg-white"
               onClick={() => {
                 if (
                   window.confirm("Chắc chắn xóa user " + user.taiKhoan + " ?")
@@ -117,8 +117,7 @@ export default function User() {
                 }
               }}
             >
-              <TrashIcon className=" h-7 w-7 origin-center bg-white text-red-600 transition duration-150 hover:scale-125" />
-              <span className="tooltiptext">Xoá</span>
+              <DeleteOutlined style={{ color: "red" }} />
             </span>
           </Fragment>
         );

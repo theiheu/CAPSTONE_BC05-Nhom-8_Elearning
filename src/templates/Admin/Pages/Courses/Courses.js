@@ -3,6 +3,7 @@ import "./../../style/StyleAdmin.css";
 import { PencilAltIcon, SearchIcon, TrashIcon } from "@heroicons/react/outline";
 import { Button, Input, Table } from "antd";
 import { useDispatch, useSelector } from "react-redux";
+import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import { useEffect } from "react";
 import {
   deleteCourseAction,
@@ -124,14 +125,13 @@ export default function Courses() {
             <Link
               key={1}
               to={`/admin/courses/edit/${courses.maKhoaHoc}`}
-              className="tooltip bg-white"
+              className=" bg-white"
             >
-              <PencilAltIcon className="mr-3 h-7 w-7 origin-center bg-white text-blue-500 transition duration-150 hover:scale-125" />
-              <span className="tooltiptext text-black">Sửa</span>
+              <EditOutlined style={{ color: "blue" }} />{" "}
             </Link>
             <span
               key={2}
-              className="tooltip cursor-pointer bg-white"
+              className=" ml-3 cursor-pointer bg-white"
               onClick={() => {
                 if (
                   window.confirm(
@@ -142,8 +142,7 @@ export default function Courses() {
                 }
               }}
             >
-              <TrashIcon className=" h-7 w-7 origin-center bg-white text-red-600 transition duration-150 hover:scale-125" />
-              <span className="tooltiptext">Xoá</span>
+              <DeleteOutlined style={{ color: "red" }} />
             </span>
           </Fragment>
         );
