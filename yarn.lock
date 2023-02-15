@@ -1350,10 +1350,10 @@
   resolved "https://registry.npmjs.org/@headlessui/react/-/react-1.4.1.tgz"
   integrity sha512-gL6Ns5xQM57cZBzX6IVv6L7nsam8rDEpRhs5fg28SN64ikfmuuMgunc+Rw5C1cMScnvFM+cz32ueVrlSFEVlSg==
 
-"@heroicons/react@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.npmjs.org/@heroicons/react/-/react-1.0.5.tgz"
-  integrity sha512-UDMyLM2KavIu2vlWfMspapw9yii7aoLwzI2Hudx4fyoPwfKfxU8r3cL8dEBXOjcLG0/oOONZzbT14M1HoNtEcg==
+"@heroicons/react@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@heroicons/react/-/react-1.0.6.tgz#35dd26987228b39ef2316db3b1245c42eb19e324"
+  integrity sha512-JJCXydOFWMDpCP4q13iEplA503MQO3xLoZiKum+955ZCtHINWnx26CUxVxxFQu/uLb4LW3ge15ZpzIkXKkJ8oQ==
 
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
@@ -11930,9 +11930,9 @@ tailwind-merge@^1.8.1:
   resolved "https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-1.9.1.tgz"
   integrity sha512-ED9MkiUHlmfh58EC1xHRqXcH1IQyRtmDP0AmXlugYkP2tvfu7ejtjFEHJLJt93mQ7ZJkcqSIgm9M394bq5vOJg==
 
-"tailwindcss@npm:@tailwindcss/postcss7-compat":
+"tailwindcss@npm:@tailwindcss/postcss7-compat@^2.2.17":
   version "2.2.17"
-  resolved "https://registry.npmjs.org/@tailwindcss/postcss7-compat/-/postcss7-compat-2.2.17.tgz"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/postcss7-compat/-/postcss7-compat-2.2.17.tgz#dc78f3880a2af84163150ff426a39e42b9ae8922"
   integrity sha512-3h2svqQAqYHxRZ1KjsJjZOVTQ04m29LjfrLjXyZZEJuvUuJN+BCIF9GI8vhE1s0plS0mogd6E6YLg6mu4Wv/Vw==
   dependencies:
     arg "^5.0.1"
