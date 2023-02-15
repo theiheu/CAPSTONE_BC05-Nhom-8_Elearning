@@ -1,6 +1,5 @@
-
 import React, { Fragment } from "react";
-import { Modal} from 'antd';
+import { Modal } from "antd";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "./../Style/StylePages.css";
@@ -8,26 +7,26 @@ import { history } from "../../../../App";
 import { useDispatch } from "react-redux";
 import { signUpAction } from "../../../../redux/actions/userManagermentAction";
 import { GROUPID } from "../../../../utilities/Settings/config";
+import { Container } from "react-bootstrap";
 
 export default function Signup() {
-  
-  const countDown = () =>{
-  let secondsToGo = 5;
-  const modal = Modal.success({
-    title: 'Đăng ký tài khoản thành công',
-    content: `Thông báo tự động tắt sau ${secondsToGo}s.`,
-  });
-  const timer = setInterval(() => {
-    secondsToGo -= 1;
-    modal.update({
+  const countDown = () => {
+    let secondsToGo = 5;
+    const modal = Modal.success({
+      title: "Đăng ký tài khoản thành công",
       content: `Thông báo tự động tắt sau ${secondsToGo}s.`,
     });
-  }, 1000);
-  setTimeout(() => {
-    clearInterval(timer);
-    modal.destroy();
-  }, secondsToGo * 1000);
-}
+    const timer = setInterval(() => {
+      secondsToGo -= 1;
+      modal.update({
+        content: `Thông báo tự động tắt sau ${secondsToGo}s.`,
+      });
+    }, 1000);
+    setTimeout(() => {
+      clearInterval(timer);
+      modal.destroy();
+    }, secondsToGo * 1000);
+  };
 
   const dispatch = useDispatch();
 
@@ -48,7 +47,9 @@ export default function Signup() {
       matKhau: Yup.string().required("Required!"),
       hoTen: Yup.string().required("Required!"),
       soDT: Yup.string().required("Required!"),
-      email: Yup.string().email("Email đúng định dạng phải là email@email.com").required("Required!"),
+      email: Yup.string()
+        .email("Email đúng định dạng phải là email@email.com")
+        .required("Required!"),
     }),
     onSubmit: (values) => {
       dispatch(signUpAction(values, countDown));
@@ -57,30 +58,30 @@ export default function Signup() {
 
   return (
     <Fragment>
-      <div className="grid grid-flow-row gap-x-8 px-5 pt-5">
+      <div className="mx-auto grid grid-flow-row gap-x-8 px-5 pt-5">
         <div className="w-fit place-self-center">
           <h2 className="my-8 text-center text-4xl ">Sign Up</h2>
         </div>
         <div className="mt-2 pb-10">
           <form onSubmit={formik.handleSubmit}>
             <div>
-              <div className="text-sm font-bold font-body text-gray-700 tracking-wide">
+              <div className="font-body text-sm font-bold tracking-wide text-gray-700">
                 Tên tài khoản
               </div>
               <input
                 name="taiKhoan"
                 value={formik.values.taiKhoan}
                 onChange={formik.handleChange}
-                className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-red-500"
+                className="focus:outline-none w-full border-b border-gray-300 py-2 text-lg focus:border-red-500"
               />
 
               {formik.errors.taiKhoan && formik.touched.taiKhoan && (
                 <p className="text-red-600">{formik.errors.taiKhoan}</p>
               )}
             </div>
-            <div className="mt-8 passwordSignIn">
-              <div className="flex justify-between items-center">
-                <div className="text-sm font-bold text-gray-700 tracking-wide">
+            <div className="passwordSignIn mt-8">
+              <div className="flex items-center justify-between">
+                <div className="text-sm font-bold tracking-wide text-gray-700">
                   Mật khẩu
                 </div>
               </div>
@@ -89,15 +90,15 @@ export default function Signup() {
                 name="matKhau"
                 value={formik.values.matKhau}
                 onChange={formik.handleChange}
-                className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-red-500"
+                className="focus:outline-none w-full border-b border-gray-300 py-2 text-lg focus:border-red-500"
               />
               {formik.errors.matKhau && formik.touched.matKhau && (
                 <p className="text-red-600">{formik.errors.matKhau}</p>
               )}
             </div>
             <div className="mt-8">
-              <div className="flex justify-between items-center">
-                <div className="text-sm font-bold text-gray-700 tracking-wide">
+              <div className="flex items-center justify-between">
+                <div className="text-sm font-bold tracking-wide text-gray-700">
                   Họ & tên của bạn:
                 </div>
               </div>
@@ -105,15 +106,15 @@ export default function Signup() {
                 name="hoTen"
                 value={formik.values.hoTen}
                 onChange={formik.handleChange}
-                className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-red-500"
+                className="focus:outline-none w-full border-b border-gray-300 py-2 text-lg focus:border-red-500"
               />
               {formik.errors.hoTen && formik.touched.hoTen && (
                 <p className="text-red-600">{formik.errors.hoTen}</p>
               )}
             </div>
             <div className="mt-8">
-              <div className="flex justify-between items-center">
-                <div className="text-sm font-bold text-gray-700 tracking-wide">
+              <div className="flex items-center justify-between">
+                <div className="text-sm font-bold tracking-wide text-gray-700">
                   Số điện thoại:
                 </div>
               </div>
@@ -121,15 +122,15 @@ export default function Signup() {
                 name="soDT"
                 value={formik.values.soDT}
                 onChange={formik.handleChange}
-                className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-red-500"
+                className="focus:outline-none w-full border-b border-gray-300 py-2 text-lg focus:border-red-500"
               />
               {formik.errors.soDT && formik.touched.soDT && (
                 <p className="text-red-600">{formik.errors.soDT}</p>
               )}
             </div>
             <div className="mt-8">
-              <div className="flex justify-between items-center">
-                <div className="text-sm font-bold text-gray-700 tracking-wide">
+              <div className="flex items-center justify-between">
+                <div className="text-sm font-bold tracking-wide text-gray-700">
                   Email:
                 </div>
               </div>
@@ -137,26 +138,18 @@ export default function Signup() {
                 name="email"
                 value={formik.values.email}
                 onChange={formik.handleChange}
-                className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-red-500"
+                className="focus:outline-none w-full border-b border-gray-300 py-2 text-lg focus:border-red-500"
               />
               {formik.errors.email && formik.touched.email && (
                 <p className="text-red-600">{formik.errors.email}</p>
               )}
             </div>
-            <div className="mt-8">
-              <div className="flex justify-between items-center">
-                <div className="text-sm font-bold text-gray-700 tracking-wide">
-                  Mã nhóm: {GROUPID}
-                </div>
-              </div>
-           
-            </div>
 
             <div className="mt-10">
               <button
                 countDown={countDown}
-                className="text-gray-100 p-4 w-full rounded-full tracking-wide
-                          font-semibold font-display focus:outline-none focus:shadow-outline
+                className="font-display focus:outline-none focus:shadow-outline w-full rounded-full
+                          p-4 font-semibold tracking-wide text-gray-100
                           shadow-lg"
                 style={{ backgroundColor: "#E96036" }}
               >
@@ -164,7 +157,7 @@ export default function Signup() {
               </button>
             </div>
           </form>
-          <div className="mt-8 text-sm font-display font-semibold text-gray-700 text-center">
+          <div className="font-display mt-8 text-center text-sm font-semibold text-gray-700">
             <div>
               Bạn đã có tài khoản ?{" "}
               <button

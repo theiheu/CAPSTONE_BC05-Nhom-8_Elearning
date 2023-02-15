@@ -26,10 +26,8 @@ export default function UserTemplate(props) {
 
             <Fragment>
               <div className="user-page mb-8">
-                <div className="relative grid grid-flow-col grid-cols-12 justify-center gap-x-8 px-5 pt-5">
-                  <div className="col-span-6">
-                    <Component {...propsRoute} />
-                  </div>
+                <div className="relative py-5">
+                  <Component {...propsRoute} />
                 </div>
               </div>
             </Fragment>
