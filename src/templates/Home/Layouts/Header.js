@@ -43,8 +43,7 @@ export default function Header({ toggle }) {
       return (
         <div className="ml-auto flex">
           <button
-            className="lg:text-md mr-2 w-max rounded-md p-3 text-xs text-main-500 ring-1 
-            ring-main-500 transition-colors duration-150 hover:bg-main-500  sm:px-4 sm:py-2 xl:text-lg"
+            className="lg:text-md mr-2 w-max rounded-md p-3 text-xs text-main-500 ring-1 ring-main-500 transition-colors duration-150 sm:px-4 sm:py-2 xl:text-lg"
             onClick={() => {
               setShowModal(!showModal);
             }}
