@@ -108,6 +108,13 @@ export default function SignIn({ setShowModal }) {
             </div>
           </div>
           <p className="mt-4 mb-8 text-center text-sm text-gray-500 lg:my-8 lg:text-base "></p>
+
+          <div className="container mb-2 border-2">
+            <h1>Tài khoản Admin</h1>
+            <span>Tài khoản: demo310898</span>
+            <br />
+            <span>Mật khẩu: 123456789</span>
+          </div>
         </div>
       );
     } else {
